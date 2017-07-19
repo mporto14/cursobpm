@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<externalResource name="WsDespesaService" type="web service" subtype="WSCONSUMER">
+	<property name="transport.connector" value="ServerDespesa"/>
+	<property name="transport.http.path" value="/despesas/services"/>
+	<property name="exceptionPolicy" value="SYSTEM"/>
+	<property name="binding.type" value="static"/>
+	<property name="transport.type" value="HTTP"/>
+	<property name="instrospect.type" value="introspect.direct"/>
+</externalResource>

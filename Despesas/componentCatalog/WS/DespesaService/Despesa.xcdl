@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="Despesa" description="" versionID="Version 6.0 GA" flags="invokeable" signature="despesa;http://ws.curso/;N;N" dynamic="true" type="xml">
+	<inherit class="Fuego.Xml.XMLObject" flags="public"/>
+	<objectProperty name="elementType" value="complexType"/>
+	<objectProperty name="invokeableClassName" value="fuego.xmlruntime.XMLObject"/>
+	<objectProperty name="namespace" value="http://ws.curso/"/>
+	<objectProperty name="nativeName" value="despesa"/>
+	<attributes>
+		<Int length="32" name="id" flags="hassetter hasgetter public" primitive="true" position="1" writeSignature="@0;Vid;I4;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N" readSignature="@0;Vid;I4;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N">
+			<property name="elementNamespace" value="http://ws.curso/"/>
+			<property name="elementPosition" value="0"/>
+			<property name="elementType" value="elementType"/>
+			<property name="isNilable" value="false"/>
+			<property name="nativeName" value="id"/>
+			<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+			<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:int"/>
+		</Int>
+		<String name="motivo" flags="hassetter hasgetter public" position="2" writeSignature="@1;Vmotivo;S;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N" readSignature="@1;Vmotivo;S;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N">
+			<property name="elementNamespace" value="http://ws.curso/"/>
+			<property name="elementPosition" value="1"/>
+			<property name="elementType" value="elementType"/>
+			<property name="isNilable" value="false"/>
+			<property name="nativeName" value="motivo"/>
+			<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+			<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:string"/>
+		</String>
+		<String name="status" flags="hassetter hasgetter public" position="3" writeSignature="@2;Vstatus;S;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N" readSignature="@2;Vstatus;S;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N">
+			<property name="elementNamespace" value="http://ws.curso/"/>
+			<property name="elementPosition" value="2"/>
+			<property name="elementType" value="elementType"/>
+			<property name="isNilable" value="false"/>
+			<property name="nativeName" value="status"/>
+			<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+			<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:string"/>
+		</String>
+		<Real length="64" name="valor" flags="hassetter hasgetter public" primitive="true" position="4" writeSignature="@3;Vvalor;R8;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N" readSignature="@3;Vvalor;R8;http://www.w3.org/2001/XMLSchema;http://ws.curso/;N">
+			<property name="elementNamespace" value="http://ws.curso/"/>
+			<property name="elementPosition" value="3"/>
+			<property name="elementType" value="elementType"/>
+			<property name="isNilable" value="false"/>
+			<property name="nativeName" value="valor"/>
+			<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+			<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:double"/>
+		</Real>
+	</attributes>
+	<methods>
+		<method name="Despesa" flags="static public" signature="Ddespesa;http://ws.curso/;N;N">
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.Despesa"/>
+		</method>
+		<method name="Despesa" flags="static public" signature="Xdespesa;http://ws.curso/;N;N">
+			<arg name="xmlText" description="" flags="in" type="String"/>
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.Despesa"/>
+		</method>
+		<method name="Despesa" flags="static public" signature="Fdespesa;http://ws.curso/;N;N">
+			<arg name="name" description="" flags="in" type="String"/>
+			<arg name="attributes" description="" flags="in" type="String[String]"/>
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.Despesa"/>
+		</method>
+	</methods>
+</component>

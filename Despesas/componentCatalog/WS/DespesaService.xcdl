@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="DespesaService" description="" versionID="Version 6.0 GA" flags="abstract invokeable" signature="DespesaService" dynamic="true" type="web service">
+	<objectProperty name="configName" value="ServerDespesa"/>
+	<objectProperty name="configsCreated" value="WsDespesaServiceProducer,WsDespesaService"/>
+	<objectProperty name="elementsMapping" value="{}"/>
+	<objectProperty name="instrospect.type" value="introspect.direct"/>
+	<objectProperty name="introspectionAddress" value="http://localhost:8080/despesas/services?wsdl"/>
+	<objectProperty name="schema_" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;xsd:schema xmlns:wsam=&quot;http://www.w3.org/2007/05/addressing/metadata&quot;  xmlns=&quot;http://schemas.xmlsoap.org/wsdl/&quot;  xmlns:wsp=&quot;http://www.w3.org/ns/ws-policy&quot;  xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;  xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;  xmlns:wsp1_2=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;  xmlns:tns=&quot;http://ws.curso/&quot;  xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; &gt;
+    &lt;xsd:import namespace=&quot;http://ws.curso/&quot; schemaLocation=&quot;http://localhost:8080/despesas/services?xsd=1&quot;/&gt;
+&lt;/xsd:schema&gt;
+"/>
+	<objectProperty name="schema_http://ws.curso/" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;xs:schema targetNamespace=&quot;http://ws.curso/&quot; version=&quot;1.0&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;  xmlns=&quot;http://ws.curso/&quot; &gt;
+    &lt;xs:complexType name=&quot;despesa&quot;&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element type=&quot;xs:int&quot; name=&quot;id&quot;/&gt;
+            &lt;xs:element type=&quot;xs:string&quot; minOccurs=&quot;0&quot; name=&quot;motivo&quot;/&gt;
+            &lt;xs:element type=&quot;xs:string&quot; minOccurs=&quot;0&quot; name=&quot;status&quot;/&gt;
+            &lt;xs:element type=&quot;xs:double&quot; minOccurs=&quot;0&quot; name=&quot;valor&quot;/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+&lt;/xs:schema&gt;
+"/>
+	<objectProperty name="targetNamespace" value="http://ws.curso/"/>
+	<objectProperty name="wsdl" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;definitions targetNamespace=&quot;http://ws.curso/&quot; name=&quot;WsDespesaImplService&quot; xmlns:wsam=&quot;http://www.w3.org/2007/05/addressing/metadata&quot;  xmlns=&quot;http://schemas.xmlsoap.org/wsdl/&quot;  xmlns:wsp=&quot;http://www.w3.org/ns/ws-policy&quot;  xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;  xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;  xmlns:wsp1_2=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;  xmlns:tns=&quot;http://ws.curso/&quot;  xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; &gt;
+    &lt;types&gt;
+        &lt;xsd:schema&gt;
+            &lt;xsd:import namespace=&quot;http://ws.curso/&quot; schemaLocation=&quot;http://localhost:8080/despesas/services?xsd=1&quot;/&gt;
+        &lt;/xsd:schema&gt;
+    &lt;/types&gt;
+    &lt;message name=&quot;atualizarStatus&quot;&gt;
+        &lt;part type=&quot;tns:despesa&quot; name=&quot;arg0&quot;/&gt;
+    &lt;/message&gt;
+    &lt;message name=&quot;atualizarStatusResponse&quot;&gt;
+        &lt;part type=&quot;xsd:boolean&quot; name=&quot;return&quot;/&gt;
+    &lt;/message&gt;
+    &lt;message name=&quot;buscarPorId&quot;&gt;
+        &lt;part type=&quot;xsd:int&quot; name=&quot;arg0&quot;/&gt;
+    &lt;/message&gt;
+    &lt;message name=&quot;buscarPorIdResponse&quot;&gt;
+        &lt;part type=&quot;tns:despesa&quot; name=&quot;return&quot;/&gt;
+    &lt;/message&gt;
+    &lt;portType name=&quot;WsDespesa&quot;&gt;
+        &lt;operation name=&quot;atualizarStatus&quot;&gt;
+            &lt;input Action=&quot;http://ws.curso/WsDespesa/atualizarStatusRequest&quot; message=&quot;tns:atualizarStatus&quot;/&gt;
+            &lt;output Action=&quot;http://ws.curso/WsDespesa/atualizarStatusResponse&quot; message=&quot;tns:atualizarStatusResponse&quot;/&gt;
+        &lt;/operation&gt;
+        &lt;operation name=&quot;buscarPorId&quot;&gt;
+            &lt;input Action=&quot;http://ws.curso/WsDespesa/buscarPorIdRequest&quot; message=&quot;tns:buscarPorId&quot;/&gt;
+            &lt;output Action=&quot;http://ws.curso/WsDespesa/buscarPorIdResponse&quot; message=&quot;tns:buscarPorIdResponse&quot;/&gt;
+        &lt;/operation&gt;
+    &lt;/portType&gt;
+    &lt;binding type=&quot;tns:WsDespesa&quot; name=&quot;WsDespesaImplPortBinding&quot;&gt;
+        &lt;soap:binding style=&quot;rpc&quot; transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+        &lt;operation name=&quot;atualizarStatus&quot;&gt;
+            &lt;soap:operation soapAction=&quot;&quot;/&gt;
+            &lt;input&gt;
+                &lt;soap:body namespace=&quot;http://ws.curso/&quot; use=&quot;literal&quot;/&gt;
+            &lt;/input&gt;
+            &lt;output&gt;
+                &lt;soap:body namespace=&quot;http://ws.curso/&quot; use=&quot;literal&quot;/&gt;
+            &lt;/output&gt;
+        &lt;/operation&gt;
+        &lt;operation name=&quot;buscarPorId&quot;&gt;
+            &lt;soap:operation soapAction=&quot;&quot;/&gt;
+            &lt;input&gt;
+                &lt;soap:body namespace=&quot;http://ws.curso/&quot; use=&quot;literal&quot;/&gt;
+            &lt;/input&gt;
+            &lt;output&gt;
+                &lt;soap:body namespace=&quot;http://ws.curso/&quot; use=&quot;literal&quot;/&gt;
+            &lt;/output&gt;
+        &lt;/operation&gt;
+    &lt;/binding&gt;
+    &lt;service name=&quot;WsDespesaImplService&quot;&gt;
+        &lt;port binding=&quot;tns:WsDespesaImplPortBinding&quot; name=&quot;WsDespesaImplPort&quot;&gt;
+            &lt;soap:address location=&quot;http://localhost:8080/despesas/services&quot;/&gt;
+        &lt;/port&gt;
+    &lt;/service&gt;
+&lt;/definitions&gt;
+"/>
+	<attributes/>
+	<methods/>
+</component>

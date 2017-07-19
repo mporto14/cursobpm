@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<FDIObject>
+	<DirPresentation>
+		<id>PresPadrao</id>
+		<type>2</type>
+		<properties><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<presentation id="PresPadrao" owner="custom" type="INSTANCES" version="1">
+	<readonly>false</readonly>
+	<columns>
+		<column size="25">PREDEFINE_DESCRIPTION</column>
+		<column size="15">PREDEFINE_ACTIVITY</column>
+		<column format_type="NUMBER_CURRENCY" size="0">valor</column>
+		<column format_type="DEFAULT" size="12">PREDEFINE_RECEIVED TIME</column>
+		<column size="0">motivo</column>
+		<column format_type="DEFAULT" size="12">PREDEFINE_ACTIVITY DEADLINE</column>
+	</columns>
+	<ordering>
+		<entry ascending="true">PREDEFINE_ACTIVITY DEADLINE</entry>
+		<entry ascending="false">valor</entry>
+	</ordering>
+</presentation>
+]]></properties>
+	</DirPresentation>
+</FDIObject>

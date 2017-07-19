@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<externalResource name="DBReembolso" type="SQL" subtype="DDORACLE">
+	<property name="jdbc.pool.idle_timeout" value="5"/>
+	<property name="jdbc.pool.entry.max" value="10"/>
+	<property name="oracle.dateEqualsTimestamp" value="false"/>
+	<property name="jdbc.host" value="localhost"/>
+	<property name="user" value="reembolso"/>
+	<property name="jdbc.port" value="1521"/>
+	<property name="jdbc.pool.min" value="0"/>
+	<property name="jdbc.pool.maxopencursors" value="100"/>
+	<property name="oracle.sid" value="BPM"/>
+	<property name="password" value="&lt;encrypted&gt;imT8Tuc="/>
+	<property name="jdbc.xa" value="false"/>
+	<property name="jdbc.pool.max" value="10"/>
+</externalResource>

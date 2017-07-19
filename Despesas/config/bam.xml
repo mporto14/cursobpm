@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<AnalyzerProperties xsi:type='fuego.data.AnalyzerProperties' id='1'>
+	<updateTime>0001-02-01T00:00:00-03:00</updateTime>
+
+	<logDirectory>C:\curso bpm\Despesas\system</logDirectory>
+
+	<disableUpdate xsi:type='long'>-1</disableUpdate>
+
+	<disabledVariables xsi:null='1'></disabledVariables>
+
+	<disableDatawarehouse xsi:type='long'>-1</disableDatawarehouse>
+
+	<updateFrequencyMinutes xsi:type='long'>60</updateFrequencyMinutes>
+
+	<o3ServerPort xsi:type='long'>8787</o3ServerPort>
+
+	<runWorkload xsi:type='boolean'>true</runWorkload>
+
+	<runPerformance xsi:type='boolean'>true</runPerformance>
+
+	<disableDatawarehouseBoolean xsi:type='boolean'>true</disableDatawarehouseBoolean>
+
+	<snapshotTime>0001-02-01T00:00:00-03:00</snapshotTime>
+
+	<cubesUpdateTime>0001-02-01T02:00:00-03:00</cubesUpdateTime>
+
+	<configuration>Despesas_RTS</configuration>
+
+	<disableBAMUpdate xsi:type='boolean'>true</disableBAMUpdate>
+
+	<caducityInHours xsi:type='long'>24</caducityInHours>
+
+	<language>en</language>
+
+	<bamRuntimeConfiguration>Despesas_BAM</bamRuntimeConfiguration>
+
+	<generateO3Cubes xsi:type='boolean'>false</generateO3Cubes>
+
+	<bamConfiguration>Despesas_BAM</bamConfiguration>
+
+	<disableUpdateBoolean xsi:type='boolean'>true</disableUpdateBoolean>
+
+	<measureVariables xsi:null='1'></measureVariables>
+
+	<enableO3Service xsi:type='boolean'>false</enableO3Service>
+
+	<updateFrequency xsi:type='long'>0</updateFrequency>
+
+	<logDefaultSeverities>Warning</logDefaultSeverities>
+
+	<o3ServerHost>localhost</o3ServerHost>
+</AnalyzerProperties>

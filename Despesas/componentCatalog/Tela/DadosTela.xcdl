@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="DadosTela" description="" versionID="Version 6.0 GA" flags="cloneable replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes>
+		<String name="acao" flags="hassetter hasgetter public" position="2"/>
+		<object type="Model.Despesa" name="despesa" flags="hassetter hasgetter public" position="3"/>
+		<Int length="32" name="idSolicitacao" flags="hassetter hasgetter public" position="1"/>
+	</attributes>
+	<methods>
+		<method name="DadosTela" flags="static clientavailable">
+			<outputArgument name="return" description="" flags="retval" type="Tela.DadosTela"/>
+		</method>
+		<method name="buscarHistoricoReembolsos" flags="clientavailable public">
+			<arg name="request" description="" flags="in" type="Fuego.Net.HttpRequest"/>
+			<arg name="response" description="" flags="in" type="Fuego.Net.HttpResponse"/>
+			<sourceCode language="Java1">logMessage(&quot;[DESPESAS] &quot; + idSolicitacao + &quot; - Buscando historico&quot;, DEBUG);
+
+String motivo = request.getParameter(string : &quot;motivo&quot;);
+logMessage(motivo);
+
+Iterator&lt;Any[Any]&gt; resultSet = DynamicSQL.executeQuery(sentence : &quot;select * from lancamento where motivo = ?&quot;, 
+				implname : &quot;DBReembolso&quot;, inParameters : { motivo });
+String json = &quot;[&quot;;
+foreach (row in resultSet) { 
+	logMessage(&quot;&quot; + row);
+	json = json + &quot;{aprovador:\&quot;&quot; + row[&quot;aprovador&quot;] + &quot;\&quot;, valor:\&quot;&quot; + row[&quot;valor&quot;] + &quot;\&quot;, observacao:\&quot;&quot; + row[&quot;observacao&quot;] + &quot;\&quot;},&quot;;
+}
+json = json.substring(first : 0, last : json.length() - 1); //Tirando a virgula :(
+json = json + &quot;]&quot;;
+
+logMessage(&quot;[DESPESAS] &quot; + idSolicitacao + &quot; - FIM&quot;, DEBUG);</sourceCode>
+		</method>
+	</methods>
+</component>

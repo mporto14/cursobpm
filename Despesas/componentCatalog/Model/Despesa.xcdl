@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="Despesa" description="" versionID="Version 6.0 GA" flags="cloneable replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes>
+		<Int length="32" name="id" flags="hassetter hasgetter public" position="1"/>
+		<String name="motivo" flags="hassetter hasgetter public" position="2"/>
+		<String name="status" flags="hassetter hasgetter public" position="3"/>
+		<Real length="64" name="valor" flags="hassetter hasgetter public" position="4"/>
+	</attributes>
+	<methods>
+		<method name="Despesa" flags="static clientavailable">
+			<outputArgument name="return" description="" flags="retval" type="Model.Despesa"/>
+		</method>
+		<method name="fromService" flags="static clientavailable public">
+			<arg name="wsObj" description="" flags="in" type="WS.DespesaService.Despesa"/>
+			<outputArgument name="return" description="" flags="retval" type="Model.Despesa"/>
+			<sourceCode language="Java1">Despesa ret = new Despesa();
+
+ret.id = wsObj.id;
+ret.motivo = wsObj.motivo;
+ret.status = wsObj.status;
+
+return ret;</sourceCode>
+		</method>
+	</methods>
+</component>

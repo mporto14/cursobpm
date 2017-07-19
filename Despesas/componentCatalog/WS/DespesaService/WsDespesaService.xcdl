@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="WsDespesaService" description="" versionID="Version 6.0 GA" flags="invokeable" signature="WsDespesaService" dynamic="true" type="web service">
+	<objectProperty name="binding" value="soap"/>
+	<objectProperty name="bindingName" value="WsDespesaImplPortBinding"/>
+	<objectProperty name="configName" value="WsDespesaService"/>
+	<objectProperty name="location" value="http://localhost:8080/despesas/services"/>
+	<objectProperty name="nativeName" value="WsDespesa"/>
+	<objectProperty name="soapStyle" value="rpc"/>
+	<objectProperty name="targetNamespace" value="http://ws.curso/"/>
+	<objectProperty name="transport" value="HTTP"/>
+	<attributes>
+		<object type="Fuego.WebServices.Configuration" name="configuration" flags="hassetter hasgetter public hidden" position="3" writeSignature="__configuration"/>
+		<array type="Fuego.Xml.XMLObject" name="requestHeaders" flags="hassetter hasgetter public" position="1" writeSignature="requestHeaders" readSignature="requestHeaders"/>
+		<array type="Fuego.Xml.XMLObject" name="responseHeaders" flags="hassetter hasgetter public" position="2" writeSignature="responseHeaders" readSignature="responseHeaders"/>
+	</attributes>
+	<methods>
+		<method name="WsDespesaService" flags="static" signature="K">
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.WsDespesaService"/>
+		</method>
+		<method name="WsDespesaService" flags="static" signature="Kendpoint">
+			<arg name="endPoint" description="" flags="in" type="String"/>
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.WsDespesaService"/>
+		</method>
+		<method name="WsDespesaService" flags="static" signature="Kconfiguration">
+			<arg name="configuration" description="" flags="in" type="Fuego.WebServices.Configuration"/>
+			<outputArgument name="return" description="" flags="retval" type="WS.DespesaService.WsDespesaService"/>
+		</method>
+		<method name="atualizarStatus" flags="" signature="atualizarStatus">
+			<arg name="arg0" description="arg0" flags="in" type="WS.DespesaService.Despesa">
+				<property name="nativeName" value="arg0"/>
+				<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+				<property name="xsdType" value=":despesa"/>
+			</arg>
+			<arg name="result" description="result" flags="out" primitive="true" type="Bool">
+				<property name="nativeName" value="return"/>
+				<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+				<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:boolean"/>
+			</arg>
+			<property name="inputMessage" value="atualizarStatus"/>
+			<property name="mep" value="REQUEST_RESPONSE"/>
+			<property name="nativeName" value="atualizarStatus"/>
+			<property name="outputMessage" value="atualizarStatusResponse"/>
+			<property name="soapAction" value=""/>
+			<property name="soapEncoding" value="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<property name="soapNamespace" value="http://ws.curso/"/>
+			<property name="soapOperation" value="atualizarStatus"/>
+			<property name="soapStyle" value="rpc"/>
+			<property name="soapUse" value="literal"/>
+		</method>
+		<method name="buscarPorId" flags="" signature="buscarPorId">
+			<arg name="arg0" description="arg0" flags="in" primitive="true" type="Int">
+				<property name="nativeName" value="arg0"/>
+				<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+				<property name="xsdType" value="http://www.w3.org/2001/XMLSchema:int"/>
+			</arg>
+			<arg name="result" description="result" flags="out" type="WS.DespesaService.Despesa">
+				<property name="nativeName" value="return"/>
+				<property name="nativeNamespace" value="http://www.w3.org/2001/XMLSchema"/>
+				<property name="xsdType" value=":despesa"/>
+			</arg>
+			<property name="inputMessage" value="buscarPorId"/>
+			<property name="mep" value="REQUEST_RESPONSE"/>
+			<property name="nativeName" value="buscarPorId"/>
+			<property name="outputMessage" value="buscarPorIdResponse"/>
+			<property name="soapAction" value=""/>
+			<property name="soapEncoding" value="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<property name="soapNamespace" value="http://ws.curso/"/>
+			<property name="soapOperation" value="buscarPorId"/>
+			<property name="soapStyle" value="rpc"/>
+			<property name="soapUse" value="literal"/>
+		</method>
+	</methods>
+</component>
