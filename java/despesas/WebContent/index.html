@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Reembolso de despesas - v 0.1</title>
+<script>
+	var app = angular.module('despesas', []);
+	
+	app.controller("MainCtrl", function($scope, $http) { 
+		$scope.motivos = [
+			{nemotecnico : "TAXI", nome: "Taxi"},
+			{nemotecnico : "REFC", nome: "Refeicao"},
+			{nemotecnico : "TREI", nome: "Treinamento"}
+		];
+		
+		$http.get('despesa').then( (res) => $scope.listaDespesas = res.data );
+		
+		$scope.cadastrar = function() { 
+			$http.post('despesa', $scope.despesa).then( (data) => { console.log(data); alert('Pedido ' + data.data.id + ' criado') } );
+		}
+		
+	})
+</script>
+</head>
+<body ng-app="despesas" ng-controller="MainCtrl">
+	
+	<label for="valor">Valor:</label>
+	<input type="text" ng-model="despesa.valor" id="valor"></input>
+	
+	<label for="motivo">Motivo:</label>
+	<select ng-model="despesa.motivo" ng-options="m.nemotecnico as m.nome for m in motivos"></select>
+	
+	<br/>
+	<table>
+		<tr>
+			<th>Motivo</th>
+			<th>Valor</th>
+			<th>Status</th>
+		</tr>
+		<tr ng-repeat="el in listaDespesas">
+			<td>{{ el.motivo }}</td>
+			<td>{{ el.valor }}</td>
+			<td>{{ el.status }}</td>
+		</tr>
+	</table>
+	
+	<button ng-click="cadastrar()">OK</button>
+</body>
+</html>

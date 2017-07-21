@@ -3,7 +3,7 @@
 <AnalyzerProperties xsi:type='fuego.data.AnalyzerProperties' id='1'>
 	<updateTime>0001-02-01T00:00:00-03:00</updateTime>
 
-	<logDirectory>C:\curso bpm\Despesas\system</logDirectory>
+	<logDirectory>C:\curso bpm\cursobpm\Despesas\system</logDirectory>
 
 	<disableUpdate xsi:type='long'>-1</disableUpdate>
 

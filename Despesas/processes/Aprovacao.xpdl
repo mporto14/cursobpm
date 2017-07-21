@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Jul 19, 2017 1:26:20 AM</xpdl:Created>
+            Jul 19, 2017 1:37:45 AM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -266,7 +266,7 @@
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="890.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="910.0" YCoordinate="110.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -552,7 +552,7 @@
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="963.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="1010.0" YCoordinate="110.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -612,8 +612,8 @@
                 <xpdl:Transition Id="ConcluirProcessoToEnd" Name="ConcluirProcessoToEnd" From="ConcluirProcesso" To="End">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="890.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="963.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="910.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="1010.0" YCoordinate="110.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -658,7 +658,7 @@
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
                             <xpdl:Coordinates XCoordinate="760.0" YCoordinate="110.0"/>
-                            <xpdl:Coordinates XCoordinate="890.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="910.0" YCoordinate="110.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -751,13 +751,17 @@
 		&lt;method name=&quot;concluirProcesso&quot;
 			flags=&quot;server&quot;&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;WS.DespesaService.Despesa d = new WS.DespesaService.Despesa();
-d.id = idSolicitacao;
-d.status = acao;
-boolean status;
-WsDespesaService.atualizarStatus(arg0 : d, out result : status);
+				language=&quot;Fuego2&quot;&gt;d as WS.DespesaService.Despesa = WS.DespesaService.Despesa()
+d.id = idSolicitacao
+d.status = acao
+status as Bool
 
-logMessage(&amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Processo concluido com acao = &amp;quot; + acao, DEBUG);
+atualizarStatus WsDespesaService
+    using arg0 = d
+    returning status = result
+
+logMessage &amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Processo concluido com acao = &amp;quot; + acao
+    using severity = DEBUG
 &lt;/sourceCode&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;dividirAprovacao&quot;

@@ -7,35 +7,6 @@
 <map/>
 <node name="STUDIO">
 <map/>
-<node name="Renata-PC">
-<map/>
-<node name="10099">
-<map/>
-<node name="port">
-<map>
-<entry key="port" value="8586"/>
-</map>
-</node>
-<node name="protocol">
-<map>
-<entry key="protocol" value="tcp"/>
-</map>
-</node>
-</node>
-<node name="homeDir">
-<map>
-<entry key="homeDir" value="C:\Users\Renata\Documents\Curso BPM\workspace\Despesas"/>
-</map>
-</node>
-<node name="logDir">
-<map>
-<entry key="logDir" value="C:\Users\Renata\Documents\Curso BPM\workspace\Despesas\system"/>
-</map>
-</node>
-<node name="webConsoleURL">
-<map/>
-</node>
-</node>
 <node name="bam">
 <map/>
 <node name="bamSnapshotDisposing">
@@ -147,7 +118,7 @@
 </node>
 <node name="engineLogSeverity">
 <map>
-<entry key="engineLogSeverity" value="Debug"/>
+<entry key="engineLogSeverity" value="Warning"/>
 </map>
 </node>
 <node name="mailLogSeverity">
@@ -182,13 +153,16 @@
 </node>
 <node name="homeDir">
 <map>
-<entry key="homeDir" value="C:\curso bpm\Despesas"/>
+<entry key="homeDir" value="C:\curso bpm\cursobpm\Despesas"/>
 </map>
 </node>
 <node name="logDir">
 <map>
-<entry key="logDir" value="C:\curso bpm\Despesas\system"/>
+<entry key="logDir" value="C:\curso bpm\cursobpm\Despesas\system"/>
 </map>
+</node>
+<node name="webConsoleURL">
+<map/>
 </node>
 </node>
 <node name="memory">

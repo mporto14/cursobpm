@@ -21,7 +21,6 @@
 			}
 
 			function buscarHistorico(motivo) { 
-				console.log('bora!');
 				new Ajax.Request("<f:invokeUrl var='dadosTela' methodName='buscarHistoricoReembolsos'/>", {
 						method: "get",
 						onSuccess: function(res) { 
