@@ -4,6 +4,7 @@
 	<DirHumanParticipant>
 		<id>anl01_rh</id>
 		<displayName>anl01_rh</displayName>
+		<mail>anl01_rh@bol.com.br</mail>
 		<receivesMail>false</receivesMail>
 		<status>A</status>
 		<cost>0.0</cost>

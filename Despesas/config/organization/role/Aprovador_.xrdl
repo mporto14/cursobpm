@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<FDIObject>
+	<DirOrganizationalRole>
+		<name>Aprovador_</name>
+		<localizedDisplayNames>
+			<localizedDisplayName>
+				<locale>pt</locale>
+				<message>Aprovador_</message>
+			</localizedDisplayName>
+		</localizedDisplayNames>
+		<isParametric>false</isParametric>
+	</DirOrganizationalRole>
+</FDIObject>

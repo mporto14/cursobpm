@@ -31,7 +31,6 @@
 										res.valor + "</td><td>" + res.observacao + '</td>');
 							},
 						onFailure: function(res) { 
-							console.log('merda');
 							console.log(res);
 						}
 					})
@@ -62,10 +61,10 @@
 				</table>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<button class="btn btn-success" onclick="aprovar();">Aprovar</button>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<button class="btn btn-danger" onclick="reprovar();">Reprovar</button>
 				</div>
 			</div>

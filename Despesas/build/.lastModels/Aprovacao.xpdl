@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Aug 6, 2017 8:03:15 AM</xpdl:Created>
+            Aug 6, 2017 8:03:37 AM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -633,28 +633,6 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
-                <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="54.0"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                    <xpdl:Extensions>
-                        <albpm:ALBPMExtensions>
-                            <albpm:FeatureSet>
-                                <albpm:StringFeature name="type" value="GROUP"/>
-                                <albpm:BooleanFeature name="atomic" value="false"/>
-                                <albpm:BooleanFeature name="collapsed" value="true"/>
-                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
-                                <albpm:BooleanFeature name="mainGroup" value="true"/>
-                            </albpm:FeatureSet>
-                            <albpm:Localization/>
-                        </albpm:ALBPMExtensions>
-                    </xpdl:Extensions>
-                </xpdl:Activity>
                 <xpdl:Activity Name="DividirAprovacoes" Id="DividirAprovacoes">
                     <xpdl:Route GatewayType="OR" MarkerVisible="true"/>
                     <xpdl:NodeGraphicsInfos>
@@ -692,7 +670,7 @@
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
-                                        </albpm:LocalizationDescription>
+                                    </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
                             </albpm:Localization>
                         </albpm:ALBPMExtensions>
@@ -707,14 +685,6 @@
                     <xpdl:TransitionRestrictions>
                         <xpdl:TransitionRestriction>
                             <xpdl:Join Type="XOR"/>
-                        </xpdl:TransitionRestriction>
-                        <xpdl:TransitionRestriction>
-                            <xpdl:Split Type="XOR">
-                                <xpdl:TransitionRefs>
-                                    <xpdl:TransitionRef Id="Join1ToJoin"/>
-                                    <xpdl:TransitionRef Id="Join1ToJoin1"/>
-                                </xpdl:TransitionRefs>
-                            </xpdl:Split>
                         </xpdl:TransitionRestriction>
                     </xpdl:TransitionRestrictions>
                     <xpdl:NodeGraphicsInfos>
@@ -752,9 +722,31 @@
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
-                                        </albpm:LocalizationDescription>
+                                    </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
                             </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="54.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="GROUP"/>
+                                <albpm:BooleanFeature name="atomic" value="false"/>
+                                <albpm:BooleanFeature name="collapsed" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="mainGroup" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization/>
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
@@ -826,21 +818,6 @@
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
                             <xpdl:Coordinates XCoordinate="1175.0" YCoordinate="110.0"/>
                             <xpdl:Coordinates XCoordinate="1295.0" YCoordinate="110.0"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                    <albpm:ALBPMExtensions>
-                        <albpm:FeatureSet>
-                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
-                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
-                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
-                        </albpm:FeatureSet>
-                    </albpm:ALBPMExtensions>
-                </xpdl:Transition>
-                <xpdl:Transition Id="Join1ToJoin1" Name="Join1ToJoin1" From="Join1" To="Join1">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="70.0"/>
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="70.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -983,9 +960,6 @@
 	&lt;inherit
 		class=&quot;Fuego.Lib.ProcessInstance&quot;
 		flags=&quot;&quot;/&gt;
-	&lt;inherit
-		class=&quot;CurrentProject.Instance&quot;
-		flags=&quot;delegated&quot;/&gt;
 	&lt;objectProperty name=&quot;initAllFields&quot;
 		value=&quot;true&quot;/&gt;
 	&lt;objectProperty name=&quot;javaSerialId&quot;
@@ -1003,7 +977,7 @@
 			position=&quot;2&quot;/&gt;
 		&lt;String name=&quot;aprovador&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;8&quot;/&gt;
+			position=&quot;3&quot;/&gt;
 		&lt;object
 			type=&quot;Model.Despesa&quot;
 			name=&quot;despesa&quot;
@@ -1016,7 +990,7 @@
 			position=&quot;5&quot;/&gt;
 		&lt;String name=&quot;parametroAprov&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;7&quot;/&gt;
+			position=&quot;6&quot;/&gt;
 	&lt;/attributes&gt;
 	&lt;methods&gt;
 		&lt;method name=&quot;Instance&quot;

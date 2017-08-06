@@ -4,6 +4,7 @@
 	<DirHumanParticipant>
 		<id>gp01</id>
 		<displayName>gp01</displayName>
+		<mail>gp01@uol.com.br</mail>
 		<receivesMail>false</receivesMail>
 		<status>A</status>
 		<cost>0.0</cost>

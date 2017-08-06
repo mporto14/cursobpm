@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?fuego version="6.0.5" build="97234"?>
-<xpdl:Package Name="ALBPMPackage-SFAprovarDespesa" Id="SFAprovarDespesa" xmlns:albpm="http://www.albpm.com/2007/albpm.XPDL2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" >
+<xpdl:Package Name="ALBPMPackage-AprovacaoV1" Id="AprovacaoV1" xmlns:albpm="http://www.albpm.com/2007/albpm.XPDL2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" >
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>
             2.0</xpdl:XPDLVersion>
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Aug 6, 2017 7:38:39 AM</xpdl:Created>
+            Jul 31, 2017 9:12:01 PM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -18,8 +18,77 @@
             <xpdl:Lanes>
                 <xpdl:Lane Name="AutomaticHandler" Id="AutomaticHandler">
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="450.0" IsVisible="false">
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="144.0" IsVisible="false">
                             <xpdl:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="true"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="en" label="AutomaticHandler"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    AutomaticHandler</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="Solicitante" Id="Solicitante">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="306.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="144.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="pt" label="Solicitante"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    Solicitante</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="Aprovador_" Id="Aprovador">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="130.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="450.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="pt" label="Aprovador_"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    Aprovador_</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="AutomaticHandler" Id="AutomaticHandler">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="306.0" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="580.0" YCoordinate="0.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -43,7 +112,7 @@
         </xpdl:Pool>
     </xpdl:Pools>
     <xpdl:WorkflowProcesses>
-        <xpdl:WorkflowProcess Id="SFAprovarDespesa" Name="SFAprovarDespesa">
+        <xpdl:WorkflowProcess Id="AprovacaoV1" Name="AprovacaoV1">
             <xpdl:ProcessHeader/>
             <xpdl:RedefinableHeader>
                 <xpdl:Author>
@@ -52,7 +121,7 @@
                     0</xpdl:Version>
             </xpdl:RedefinableHeader>
             <xpdl:Applications>
-                <xpdl:Application Id="prepararTela" Name="prepararTela">
+                <xpdl:Application Id="concluirProcesso" Name="concluirProcesso">
                     <xpdl:Type>
                         <xpdl:Script/>
                     </xpdl:Type>
@@ -62,6 +131,17 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Application>
+                <xpdl:Application Id="inicializarFluxo" Name="inicializarFluxo">
+                    <xpdl:Type>
+                        <xpdl:Script/>
+                    </xpdl:Type>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="ALBPMType" value="REGULAR"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Application>
+                <xpdl:Application Id="SFAprovarDespesa"/>
             </xpdl:Applications>
             <xpdl:Activities>
                 <xpdl:Activity Name="Begin" Id="Begin">
@@ -69,8 +149,8 @@
                         <xpdl:StartEvent Trigger="None"/>
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="50.0" YCoordinate="100.0"/>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Solicitante" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="170.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -86,11 +166,18 @@
                             <albpm:ArgumentMappings>
                                 <albpm:ArgumentMapping name="BeginIn" type="IN" language="Java">
                                     <albpm:Arguments>
-                                        <albpm:Argument name="despesaArg" type="Model.Despesa"/>
+                                        <albpm:Argument name="idSolicitacaoArg" type="Int"/>
                                     </albpm:Arguments>
                                     <albpm:ArgumentMaps>
-                                        <albpm:ArgumentMap target="despesa" isExpression="false" source="despesaArg"/>
+                                        <albpm:ArgumentMap target="idSolicitacao" isExpression="false" source="idSolicitacaoArg"/>
                                     </albpm:ArgumentMaps>
+                                    <albpm:Correlations>
+                                        <albpm:Correlation name="correlacaoPorId" initiate="true">
+                                            <albpm:CorrelationPropertyMappings>
+                                                <albpm:CorrelationPropertyMapping property="idSolicitacao" value="idSolicitacaoArg"/>
+                                            </albpm:CorrelationPropertyMappings>
+                                        </albpm:Correlation>
+                                    </albpm:Correlations>
                                 </albpm:ArgumentMapping>
                             </albpm:ArgumentMappings>
                             <albpm:Localization>
@@ -105,15 +192,15 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
-                <xpdl:Activity Name="PrepararTela" Id="PrepararTela">
+                <xpdl:Activity Name="InicializarFluxo" Id="InicializarFluxo">
                     <xpdl:Implementation>
                         <xpdl:Task>
-                            <xpdl:TaskApplication Id="prepararTela"/>
+                            <xpdl:TaskApplication Id="inicializarFluxo"/>
                         </xpdl:Task>
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Solicitante" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="330.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -125,23 +212,23 @@
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
                             </albpm:FeatureSet>
                             <albpm:ActivityTasks>
-                                <albpm:ActivityTask name="PrepararTela" type="METHOD">
+                                <albpm:ActivityTask name="InicializarFluxo" type="METHOD">
                                     <albpm:FeatureSet>
                                         <albpm:BooleanFeature name="mandatory" value="true"/>
-                                        <albpm:StringFeature name="method" value="prepararTela"/>
+                                        <albpm:StringFeature name="method" value="inicializarFluxo"/>
                                         <albpm:BooleanFeature name="readOnly" value="false"/>
                                         <albpm:BooleanFeature name="repeatable" value="false"/>
                                     </albpm:FeatureSet>
                                     <albpm:Localization>
                                         <albpm:LocalizationLabels>
-                                            <albpm:LocalizedLabel language="pt" label="Preparar Tela"/>
+                                            <albpm:LocalizedLabel language="pt" label="Inicializar Fluxo"/>
                                         </albpm:LocalizationLabels>
                                     </albpm:Localization>
                                 </albpm:ActivityTask>
                             </albpm:ActivityTasks>
                             <albpm:Localization>
                                 <albpm:LocalizationLabels>
-                                    <albpm:LocalizedLabel language="pt" label="Preparar Tela"/>
+                                    <albpm:LocalizedLabel language="pt" label="Inicializar Fluxo"/>
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
@@ -151,51 +238,94 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
-                <xpdl:Activity Name="TelaDeAprovacao" Id="TelaDeAprovacao">
+                <xpdl:Activity Name="AprovarDespesa" Id="AprovarDespesa">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskApplication Id="SFAprovarDespesa"/>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Aprovador" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="520.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
                         <albpm:ALBPMExtensions>
                             <albpm:FeatureSet>
-                                <albpm:StringFeature name="type" value="INTERACTIVE_COMPONENT_CALL"/>
+                                <albpm:StringFeature name="type" value="INTERACTIVE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:BooleanFeature name="abortable" value="false"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
                                 <albpm:BooleanFeature name="autocomplete" value="true"/>
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="suspendable" value="false"/>
                                 <albpm:BooleanFeature name="userSelectsTransition" value="false"/>
                             </albpm:FeatureSet>
                             <albpm:ActivityTasks>
-                                <albpm:ActivityTask name="TelaDeAprovacao" type="BPM_OBJECT_INTERACTIVE_CALL">
+                                <albpm:ActivityTask name="AprovarDespesa" type="SCREENFLOW">
                                     <albpm:FeatureSet>
-                                        <albpm:BooleanFeature name="mandatory" value="false"/>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
                                         <albpm:BooleanFeature name="readOnly" value="false"/>
                                         <albpm:BooleanFeature name="repeatable" value="false"/>
-                                        <albpm:StringFeature name="component" value="SFAprovarDespesa"/>
-                                        <albpm:StringFeature name="JSPName" value="aprovacao"/>
-                                        <albpm:BooleanFeature name="presentationDisplay" value="false"/>
-                                        <albpm:StringFeature name="instanceVariable" value="dadosTela"/>
+                                        <albpm:StringFeature name="targetModelPath" value="processes/SFAprovarDespesa"/>
+                                        <albpm:StringFeature name="targetModelName" value="SFAprovarDespesa"/>
+                                        <albpm:StringFeature name="variation" value="Default"/>
+                                        <albpm:StringFeature name="targetMappingName" value=""/>
                                     </albpm:FeatureSet>
                                     <albpm:ArgumentMappings>
-                                        <albpm:ArgumentMapping name="TelaDeAprovacaoIn" type="OUT" language="Fuego"/>
-                                        <albpm:ArgumentMapping name="TelaDeAprovacaoOut" type="IN" language="Fuego"/>
+                                        <albpm:ArgumentMapping name="AprovarDespesaIN" type="OUT" language="Java">
+                                            <albpm:Arguments>
+                                                <albpm:Argument name="despesaArg" type="Model.Despesa"/>
+                                            </albpm:Arguments>
+                                            <albpm:ArgumentMaps>
+                                                <albpm:ArgumentMap target="despesaArg" isExpression="false" source="despesa"/>
+                                            </albpm:ArgumentMaps>
+                                        </albpm:ArgumentMapping>
+                                        <albpm:ArgumentMapping name="AprovarDespesaOUT" type="IN" language="Java">
+                                            <albpm:Arguments>
+                                                <albpm:Argument name="acao" type="String"/>
+                                            </albpm:Arguments>
+                                        </albpm:ArgumentMapping>
                                     </albpm:ArgumentMappings>
                                     <albpm:Localization>
                                         <albpm:LocalizationLabels>
-                                            <albpm:LocalizedLabel language="pt" label="Tela de Aprovacao"/>
+                                            <albpm:LocalizedLabel language="pt" label="Aprovar Despesa"/>
                                         </albpm:LocalizationLabels>
                                     </albpm:Localization>
                                 </albpm:ActivityTask>
                             </albpm:ActivityTasks>
                             <albpm:Localization>
                                 <albpm:LocalizationLabels>
-                                    <albpm:LocalizedLabel language="pt" label="Tela de Aprovacao"/>
+                                    <albpm:LocalizedLabel language="pt" label="Aprovar Despesa"/>
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
                                     </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
                             </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="71.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="GROUP"/>
+                                <albpm:BooleanFeature name="atomic" value="false"/>
+                                <albpm:BooleanFeature name="collapsed" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="mainGroup" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization/>
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
@@ -205,7 +335,7 @@
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="600.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="630.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -216,16 +346,7 @@
                                 <albpm:BooleanFeature name="handlesOutArguments" value="true"/>
                             </albpm:FeatureSet>
                             <albpm:ArgumentMappings>
-                                <albpm:ArgumentMapping name="EndOut" type="OUT" language="Java">
-                                    <albpm:Arguments>
-                                        <albpm:Argument name="acao" type="String"/>
-                                        <albpm:Argument name="aprovador" type="String"/>
-                                    </albpm:Arguments>
-                                    <albpm:ArgumentMaps>
-                                        <albpm:ArgumentMap target="acao" isExpression="false" source="dadosTela.acao"/>
-                                        <albpm:ArgumentMap target="aprovador" isExpression="false" source="Participant.email"/>
-                                    </albpm:ArgumentMaps>
-                                </albpm:ArgumentMapping>
+                                <albpm:ArgumentMapping name="EndOut" type="OUT" language="Fuego"/>
                             </albpm:ArgumentMappings>
                             <albpm:Localization>
                                 <albpm:LocalizationLabels>
@@ -241,11 +362,11 @@
                 </xpdl:Activity>
             </xpdl:Activities>
             <xpdl:Transitions>
-                <xpdl:Transition Id="BeginToPrepararTela" Name="BeginToPrepararTela" From="Begin" To="PrepararTela">
+                <xpdl:Transition Id="BeginToInicializarFluxo" Name="BeginToInicializarFluxo" From="Begin" To="InicializarFluxo">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="50.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="170.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="330.0" YCoordinate="100.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -256,11 +377,11 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Transition>
-                <xpdl:Transition Id="TelaDeAprovacaoToEnd" Name="TelaDeAprovacaoToEnd" From="TelaDeAprovacao" To="End">
+                <xpdl:Transition Id="InicializarFluxoToAprovarDespesa" Name="InicializarFluxoToAprovarDespesa" From="InicializarFluxo" To="AprovarDespesa">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="600.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="330.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="520.0" YCoordinate="100.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -271,11 +392,11 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Transition>
-                <xpdl:Transition Id="PrepararTelaToTelaDeAprovacao" Name="PrepararTelaToTelaDeAprovacao" From="PrepararTela" To="TelaDeAprovacao">
+                <xpdl:Transition Id="AprovarDespesaToEnd" Name="AprovarDespesaToEnd" From="AprovarDespesa" To="End">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="520.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="630.0" YCoordinate="100.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -290,14 +411,17 @@
             <xpdl:Extensions>
                 <albpm:ALBPMExtensions>
                     <albpm:Component>
-                        &lt;component name=&quot;SFAprovarDespesa&quot;
+                        &lt;component name=&quot;Instance&quot;
 	description=&quot;&quot;
 	versionID=&quot;Version 6.0 GA&quot;
 	flags=&quot;cloneable&quot;
 	type=&quot;xobject&quot;&gt;
 	&lt;inherit
-		class=&quot;Fuego.Internal.ScreenFlow&quot;
+		class=&quot;Fuego.Lib.ProcessInstance&quot;
 		flags=&quot;&quot;/&gt;
+	&lt;inherit
+		class=&quot;CurrentProject.Instance&quot;
+		flags=&quot;delegated&quot;/&gt;
 	&lt;objectProperty name=&quot;initAllFields&quot;
 		value=&quot;true&quot;/&gt;
 	&lt;objectProperty name=&quot;javaSerialId&quot;
@@ -305,11 +429,9 @@
 	&lt;objectProperty name=&quot;methodPrefix&quot;
 		value=&quot;CIL_&quot;/&gt;
 	&lt;objectProperty name=&quot;package&quot;
-		value=&quot;Despesas.SFAprovarDespesa.Default_1_0&quot;/&gt;
+		value=&quot;Despesas.AprovacaoV1.Default_1_0&quot;/&gt;
 	&lt;attributes&gt;
-		&lt;object
-			type=&quot;Tela.DadosTela&quot;
-			name=&quot;dadosTela&quot;
+		&lt;String name=&quot;acao&quot;
 			flags=&quot;hassetter hasgetter public&quot;
 			position=&quot;1&quot;/&gt;
 		&lt;object
@@ -317,56 +439,66 @@
 			name=&quot;despesa&quot;
 			flags=&quot;hassetter hasgetter public&quot;
 			position=&quot;2&quot;/&gt;
+		&lt;Int
+			length=&quot;32&quot;
+			name=&quot;idSolicitacao&quot;
+			flags=&quot;hassetter hasgetter public&quot;
+			position=&quot;3&quot;/&gt;
+		&lt;String name=&quot;parametroAprov&quot;
+			flags=&quot;hassetter hasgetter public&quot;
+			position=&quot;4&quot;/&gt;
 	&lt;/attributes&gt;
 	&lt;methods&gt;
-		&lt;method name=&quot;SFAprovarDespesa&quot;
+		&lt;method name=&quot;Instance&quot;
 			flags=&quot;static&quot;&gt;
 			&lt;outputArgument name=&quot;return&quot;
 				description=&quot;&quot;
 				flags=&quot;retval&quot;
-				type=&quot;SFAprovarDespesa&quot;/&gt;
+				type=&quot;Instance&quot;/&gt;
 		&lt;/method&gt;
-		&lt;method name=&quot;prepararTela&quot;
+		&lt;method name=&quot;concluirProcesso&quot;
 			flags=&quot;server&quot;&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;dadosTela = new DadosTela();
+				language=&quot;Fuego2&quot;&gt;d as WS.DespesaService.Despesa = WS.DespesaService.Despesa()
+d.id = idSolicitacao
+d.status = acao
+status as Bool
 
-dadosTela.despesa = despesa;
+atualizarStatus WsDespesaService
+    using arg0 = d
+    returning status = result
 
-logMessage(&amp;quot;[DESPESAS] - Buscando historico&amp;quot;, severity : DEBUG);
+logMessage &amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Processo concluido com acao = &amp;quot; + acao
+    using severity = DEBUG
+&lt;/sourceCode&gt;
+		&lt;/method&gt;
+		&lt;method name=&quot;inicializarFluxo&quot;
+			flags=&quot;server&quot;&gt;
+			&lt;sourceCode
+				language=&quot;Java1&quot;&gt;WS.DespesaService.Despesa desp;
+WsDespesaService.buscarPorId(arg0 : idSolicitacao, out result : desp);
 
-String motivo = this.despesa.motivo;
-
-logMessage(motivo);
-
-try { 
-	Iterator&amp;lt;Any[Any]&amp;gt; resultSet = DynamicSQL.executeQuery(sentence : &amp;quot;select * from lancamento where motivo = ?&amp;quot;, 
-                                                       implname : &amp;quot;DBReembolso&amp;quot;, 
-                                                       inParameters : { motivo });
-	String json = &amp;quot;[&amp;quot;;
-
-	logMessage(&amp;quot;[DESPESAS] Retorno: &amp;quot; + resultSet);  
-	foreach (row in resultSet) {
-    	logMessage(&amp;quot;&amp;quot; + row);
-
-   		json = json + &amp;quot;{aprovador:\&amp;quot;&amp;quot; + row[&amp;quot;aprovador&amp;quot;] + &amp;quot;\&amp;quot;, valor:\&amp;quot;&amp;quot; + row[&amp;quot;valor&amp;quot;] + &amp;quot;\&amp;quot;, observacao:\&amp;quot;&amp;quot; + row[&amp;quot;observacao&amp;quot;] + &amp;quot;\&amp;quot;},&amp;quot;;
-	}
-
-	json = json.substring(first : 0, last : json.length() - 1);
-
-	// Tirando a virgula :(
-	json = json + &amp;quot;]&amp;quot;;
-} catch (Java.Lang.Throwable e) { 
-	logMessage(&amp;quot;[DESPESAS]&amp;quot; + e, severity : SEVERE);
-}
-logMessage(&amp;quot;[DESPESAS] - FIM&amp;quot;, severity : DEBUG);&lt;/sourceCode&gt;
+despesa = Model.Despesa.fromService(desp);&lt;/sourceCode&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>
-                    <albpm:CorrelationSets/>
+                    <albpm:CorrelationSets>
+                        <albpm:CorrelationSet name="correlacaoPorId">
+                            <albpm:CorrelationProperties>
+                                <albpm:CorrelationProperty name="idSolicitacao" type="Int"/>
+                            </albpm:CorrelationProperties>
+                        </albpm:CorrelationSet>
+                    </albpm:CorrelationSets>
+                    <albpm:WebServices>
+                        <albpm:WebService style="DOCUMENT_LITERAL_WRAPPED" transport="http" authenticationType="NONE" requiredHttpBasicAuthentication="false">
+                            <albpm:WebServiceOperations>
+                                <albpm:WebServiceOperation name="iniciarFluxoAprovacao" type="PROCESS_CREATION" argumentMappingName="BeginIn"/>
+                            </albpm:WebServiceOperations>
+                        </albpm:WebService>
+                    </albpm:WebServices>
                     <albpm:Localization>
                         <albpm:LocalizationLabels>
-                            <albpm:LocalizedLabel language="pt" label="SF_AprovarDespesa"/>
+                            <albpm:LocalizedLabel language="pt" label="AprovacaoV1"/>
                         </albpm:LocalizationLabels>
                         <albpm:LocalizationDescriptions>
                             <albpm:LocalizationDescription language="pt">
@@ -375,8 +507,9 @@ logMessage(&amp;quot;[DESPESAS] - FIM&amp;quot;, severity : DEBUG);&lt;/sourceCo
                     </albpm:Localization>
                     <albpm:FeatureSet>
                         <albpm:BooleanFeature name="atomic" value="false"/>
-                        <albpm:StringFeature name="generatesEvents" value="DO_NOT_GENERATE_EVENTS"/>
+                        <albpm:StringFeature name="generatesEvents" value="GENERATE_INTERACTIVE_EVENTS"/>
                         <albpm:BooleanFeature name="instanceScreenflow" value="false"/>
+                        <albpm:BooleanFeature name="isInterface" value="false"/>
                         <albpm:BooleanFeature name="sharePredefineVariables" value="true"/>
                         <albpm:StringFeature name="variation" value="Default"/>
                     </albpm:FeatureSet>

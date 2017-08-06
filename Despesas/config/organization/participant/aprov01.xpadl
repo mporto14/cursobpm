@@ -8,5 +8,24 @@
 		<status>A</status>
 		<cost>0.0</cost>
 		<efficiency>80</efficiency>
+		<rolesAssignment>
+			<roleAssignment>
+				<roleId>Aprovador</roleId>
+				<parametricValue>PROJETO</parametricValue>
+				<permissions>255</permissions>
+				<category>0</category>
+			</roleAssignment>
+			<roleAssignment>
+				<roleId>Aprovador</roleId>
+				<parametricValue>RH</parametricValue>
+				<permissions>255</permissions>
+				<category>0</category>
+			</roleAssignment>
+			<roleAssignment>
+				<roleId>Aprovador_</roleId>
+				<permissions>255</permissions>
+				<category>0</category>
+			</roleAssignment>
+		</rolesAssignment>
 	</DirHumanParticipant>
 </FDIObject>

@@ -122,7 +122,9 @@
 </map>
 </node>
 <node name="mailLogSeverity">
-<map/>
+<map>
+<entry key="mailLogSeverity" value="Severe"/>
+</map>
 </node>
 <node name="maxLogFiles">
 <map/>

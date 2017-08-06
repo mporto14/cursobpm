@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<externalResource name="MysqlDrivers" type="JCL" subtype="JCL">
+	<property name="FILE" value="mysql-connector-java-5.1.43-bin.jar"/>
+	<property name="jcl.versionable" value="false"/>
+</externalResource>

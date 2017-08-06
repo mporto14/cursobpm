@@ -2,4 +2,5 @@
 <?fuego version="6.0.5" build="97234"?>
 <publication viewsGenerationType="UNIFIED_INBOX" inboxPresentation="default_instances">
 	<deploy name="Aprovacao" variation="Default" ou=""/>
+	<deploy name="AprovacaoV1" variation="Default" ou=""/>
 </publication>

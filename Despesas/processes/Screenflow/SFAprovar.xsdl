@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?fuego version="6.0.5" build="97234"?>
-<xpdl:Package Name="ALBPMPackage-SFAprovarDespesa" Id="SFAprovarDespesa" xmlns:albpm="http://www.albpm.com/2007/albpm.XPDL2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" >
+<xpdl:Package Name="ALBPMPackage-SFAprovar" Id="SFAprovar" xmlns:albpm="http://www.albpm.com/2007/albpm.XPDL2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" >
     <xpdl:PackageHeader>
         <xpdl:XPDLVersion>
             2.0</xpdl:XPDLVersion>
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Aug 6, 2017 7:38:39 AM</xpdl:Created>
+            Jul 26, 2017 12:38:50 AM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -43,16 +43,16 @@
         </xpdl:Pool>
     </xpdl:Pools>
     <xpdl:WorkflowProcesses>
-        <xpdl:WorkflowProcess Id="SFAprovarDespesa" Name="SFAprovarDespesa">
+        <xpdl:WorkflowProcess Id="SFAprovar" Name="SFAprovar">
             <xpdl:ProcessHeader/>
             <xpdl:RedefinableHeader>
                 <xpdl:Author>
-                    Renata</xpdl:Author>
+                    maur</xpdl:Author>
                 <xpdl:Version>
                     0</xpdl:Version>
             </xpdl:RedefinableHeader>
             <xpdl:Applications>
-                <xpdl:Application Id="prepararTela" Name="prepararTela">
+                <xpdl:Application Id="inicializarVariaveis" Name="inicializarVariaveis">
                     <xpdl:Type>
                         <xpdl:Script/>
                     </xpdl:Type>
@@ -70,7 +70,7 @@
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="50.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="112.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -86,10 +86,10 @@
                             <albpm:ArgumentMappings>
                                 <albpm:ArgumentMapping name="BeginIn" type="IN" language="Java">
                                     <albpm:Arguments>
-                                        <albpm:Argument name="despesaArg" type="Model.Despesa"/>
+                                        <albpm:Argument name="dadosTelaArg" type="Tela.DadosTela"/>
                                     </albpm:Arguments>
                                     <albpm:ArgumentMaps>
-                                        <albpm:ArgumentMap target="despesa" isExpression="false" source="despesaArg"/>
+                                        <albpm:ArgumentMap target="dadosTela" isExpression="false" source="dadosTelaArg"/>
                                     </albpm:ArgumentMaps>
                                 </albpm:ArgumentMapping>
                             </albpm:ArgumentMappings>
@@ -105,15 +105,15 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
-                <xpdl:Activity Name="PrepararTela" Id="PrepararTela">
+                <xpdl:Activity Name="InicializarVariaveis" Id="InicializarVariaveis">
                     <xpdl:Implementation>
                         <xpdl:Task>
-                            <xpdl:TaskApplication Id="prepararTela"/>
+                            <xpdl:TaskApplication Id="inicializarVariaveis"/>
                         </xpdl:Task>
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="210.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -125,23 +125,23 @@
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
                             </albpm:FeatureSet>
                             <albpm:ActivityTasks>
-                                <albpm:ActivityTask name="PrepararTela" type="METHOD">
+                                <albpm:ActivityTask name="InicializarVariaveis" type="METHOD">
                                     <albpm:FeatureSet>
                                         <albpm:BooleanFeature name="mandatory" value="true"/>
-                                        <albpm:StringFeature name="method" value="prepararTela"/>
+                                        <albpm:StringFeature name="method" value="inicializarVariaveis"/>
                                         <albpm:BooleanFeature name="readOnly" value="false"/>
                                         <albpm:BooleanFeature name="repeatable" value="false"/>
                                     </albpm:FeatureSet>
                                     <albpm:Localization>
                                         <albpm:LocalizationLabels>
-                                            <albpm:LocalizedLabel language="pt" label="Preparar Tela"/>
+                                            <albpm:LocalizedLabel language="pt" label="Inicializar Variaveis"/>
                                         </albpm:LocalizationLabels>
                                     </albpm:Localization>
                                 </albpm:ActivityTask>
                             </albpm:ActivityTasks>
                             <albpm:Localization>
                                 <albpm:LocalizationLabels>
-                                    <albpm:LocalizedLabel language="pt" label="Preparar Tela"/>
+                                    <albpm:LocalizedLabel language="pt" label="Inicializar Variaveis"/>
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
@@ -154,7 +154,7 @@
                 <xpdl:Activity Name="TelaDeAprovacao" Id="TelaDeAprovacao">
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="360.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -171,7 +171,7 @@
                                         <albpm:BooleanFeature name="mandatory" value="false"/>
                                         <albpm:BooleanFeature name="readOnly" value="false"/>
                                         <albpm:BooleanFeature name="repeatable" value="false"/>
-                                        <albpm:StringFeature name="component" value="SFAprovarDespesa"/>
+                                        <albpm:StringFeature name="component" value="SFAprovar"/>
                                         <albpm:StringFeature name="JSPName" value="aprovacao"/>
                                         <albpm:BooleanFeature name="presentationDisplay" value="false"/>
                                         <albpm:StringFeature name="instanceVariable" value="dadosTela"/>
@@ -193,7 +193,7 @@
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
-                                    </albpm:LocalizationDescription>
+                                        </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
                             </albpm:Localization>
                         </albpm:ALBPMExtensions>
@@ -205,7 +205,7 @@
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="600.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="510.0" YCoordinate="100.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -216,16 +216,7 @@
                                 <albpm:BooleanFeature name="handlesOutArguments" value="true"/>
                             </albpm:FeatureSet>
                             <albpm:ArgumentMappings>
-                                <albpm:ArgumentMapping name="EndOut" type="OUT" language="Java">
-                                    <albpm:Arguments>
-                                        <albpm:Argument name="acao" type="String"/>
-                                        <albpm:Argument name="aprovador" type="String"/>
-                                    </albpm:Arguments>
-                                    <albpm:ArgumentMaps>
-                                        <albpm:ArgumentMap target="acao" isExpression="false" source="dadosTela.acao"/>
-                                        <albpm:ArgumentMap target="aprovador" isExpression="false" source="Participant.email"/>
-                                    </albpm:ArgumentMaps>
-                                </albpm:ArgumentMapping>
+                                <albpm:ArgumentMapping name="EndOut" type="OUT" language="Fuego"/>
                             </albpm:ArgumentMappings>
                             <albpm:Localization>
                                 <albpm:LocalizationLabels>
@@ -241,11 +232,26 @@
                 </xpdl:Activity>
             </xpdl:Activities>
             <xpdl:Transitions>
-                <xpdl:Transition Id="BeginToPrepararTela" Name="BeginToPrepararTela" From="Begin" To="PrepararTela">
+                <xpdl:Transition Id="BeginToInicializarVariaveis" Name="BeginToInicializarVariaveis" From="Begin" To="InicializarVariaveis">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="50.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="112.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="210.0" YCoordinate="100.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="InicializarVariaveisToTelaDeAprovacao" Name="InicializarVariaveisToTelaDeAprovacao" From="InicializarVariaveis" To="TelaDeAprovacao">
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="210.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="360.0" YCoordinate="100.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -259,23 +265,8 @@
                 <xpdl:Transition Id="TelaDeAprovacaoToEnd" Name="TelaDeAprovacaoToEnd" From="TelaDeAprovacao" To="End">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="600.0" YCoordinate="100.0"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                    <albpm:ALBPMExtensions>
-                        <albpm:FeatureSet>
-                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
-                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
-                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
-                        </albpm:FeatureSet>
-                    </albpm:ALBPMExtensions>
-                </xpdl:Transition>
-                <xpdl:Transition Id="PrepararTelaToTelaDeAprovacao" Name="PrepararTelaToTelaDeAprovacao" From="PrepararTela" To="TelaDeAprovacao">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="180.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="320.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="360.0" YCoordinate="100.0"/>
+                            <xpdl:Coordinates XCoordinate="510.0" YCoordinate="100.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -290,7 +281,7 @@
             <xpdl:Extensions>
                 <albpm:ALBPMExtensions>
                     <albpm:Component>
-                        &lt;component name=&quot;SFAprovarDespesa&quot;
+                        &lt;component name=&quot;SFAprovar&quot;
 	description=&quot;&quot;
 	versionID=&quot;Version 6.0 GA&quot;
 	flags=&quot;cloneable&quot;
@@ -305,7 +296,7 @@
 	&lt;objectProperty name=&quot;methodPrefix&quot;
 		value=&quot;CIL_&quot;/&gt;
 	&lt;objectProperty name=&quot;package&quot;
-		value=&quot;Despesas.SFAprovarDespesa.Default_1_0&quot;/&gt;
+		value=&quot;Despesas.SFAprovar.Default_1_0&quot;/&gt;
 	&lt;attributes&gt;
 		&lt;object
 			type=&quot;Tela.DadosTela&quot;
@@ -319,54 +310,25 @@
 			position=&quot;2&quot;/&gt;
 	&lt;/attributes&gt;
 	&lt;methods&gt;
-		&lt;method name=&quot;SFAprovarDespesa&quot;
+		&lt;method name=&quot;SFAprovar&quot;
 			flags=&quot;static&quot;&gt;
 			&lt;outputArgument name=&quot;return&quot;
 				description=&quot;&quot;
 				flags=&quot;retval&quot;
-				type=&quot;SFAprovarDespesa&quot;/&gt;
+				type=&quot;SFAprovar&quot;/&gt;
 		&lt;/method&gt;
-		&lt;method name=&quot;prepararTela&quot;
+		&lt;method name=&quot;inicializarVariaveis&quot;
 			flags=&quot;server&quot;&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;dadosTela = new DadosTela();
-
-dadosTela.despesa = despesa;
-
-logMessage(&amp;quot;[DESPESAS] - Buscando historico&amp;quot;, severity : DEBUG);
-
-String motivo = this.despesa.motivo;
-
-logMessage(motivo);
-
-try { 
-	Iterator&amp;lt;Any[Any]&amp;gt; resultSet = DynamicSQL.executeQuery(sentence : &amp;quot;select * from lancamento where motivo = ?&amp;quot;, 
-                                                       implname : &amp;quot;DBReembolso&amp;quot;, 
-                                                       inParameters : { motivo });
-	String json = &amp;quot;[&amp;quot;;
-
-	logMessage(&amp;quot;[DESPESAS] Retorno: &amp;quot; + resultSet);  
-	foreach (row in resultSet) {
-    	logMessage(&amp;quot;&amp;quot; + row);
-
-   		json = json + &amp;quot;{aprovador:\&amp;quot;&amp;quot; + row[&amp;quot;aprovador&amp;quot;] + &amp;quot;\&amp;quot;, valor:\&amp;quot;&amp;quot; + row[&amp;quot;valor&amp;quot;] + &amp;quot;\&amp;quot;, observacao:\&amp;quot;&amp;quot; + row[&amp;quot;observacao&amp;quot;] + &amp;quot;\&amp;quot;},&amp;quot;;
-	}
-
-	json = json.substring(first : 0, last : json.length() - 1);
-
-	// Tirando a virgula :(
-	json = json + &amp;quot;]&amp;quot;;
-} catch (Java.Lang.Throwable e) { 
-	logMessage(&amp;quot;[DESPESAS]&amp;quot; + e, severity : SEVERE);
-}
-logMessage(&amp;quot;[DESPESAS] - FIM&amp;quot;, severity : DEBUG);&lt;/sourceCode&gt;
+				language=&quot;Java1&quot;&gt;this.dadosTela = new DadosTela();
+this.dadosTela.despesa = this.despesa;&lt;/sourceCode&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>
                     <albpm:CorrelationSets/>
                     <albpm:Localization>
                         <albpm:LocalizationLabels>
-                            <albpm:LocalizedLabel language="pt" label="SF_AprovarDespesa"/>
+                            <albpm:LocalizedLabel language="pt" label="SFAprovar"/>
                         </albpm:LocalizationLabels>
                         <albpm:LocalizationDescriptions>
                             <albpm:LocalizationDescription language="pt">

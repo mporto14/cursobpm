@@ -9,17 +9,16 @@
 	<objectProperty name="packagePrefix" value="xobject"/>
 	<attributes>
 		<String name="acao" flags="hassetter hasgetter public" position="2"/>
-		<object type="Model.Despesa" name="despesa" flags="hassetter hasgetter public" position="3"/>
-		<Int length="32" name="idSolicitacao" flags="hassetter hasgetter public" position="1"/>
+		<object type="Model.Despesa" name="despesa" flags="hassetter hasgetter public" position="1"/>
 	</attributes>
 	<methods>
 		<method name="DadosTela" flags="static clientavailable">
 			<outputArgument name="return" description="" flags="retval" type="Tela.DadosTela"/>
 		</method>
-		<method name="buscarHistoricoReembolsos" flags="clientavailable public">
+		<method name="buscarHistoricoReembolsos" flags="public server disableclient">
 			<arg name="request" description="" flags="in" type="Fuego.Net.HttpRequest"/>
 			<arg name="response" description="" flags="in" type="Fuego.Net.HttpResponse"/>
-			<sourceCode language="Java1">logMessage(&quot;[DESPESAS] &quot; + idSolicitacao + &quot; - Buscando historico&quot;, severity : DEBUG);
+			<sourceCode language="Java1">logMessage(&quot;[DESPESAS] &quot; + this.despesa.id + &quot; - Buscando historico&quot;, severity : DEBUG);
 
 String motivo = this.despesa.motivo;
 
@@ -31,7 +30,7 @@ try {
                                                        inParameters : { motivo });
 	String json = &quot;[&quot;;
 
-	logMessage(&quot;[DESPESAS] &quot; + idSolicitacao + &quot;Retorno: &quot; + resultSet);  
+	logMessage(&quot;[DESPESAS] &quot; + this.despesa.id + &quot;Retorno: &quot; + resultSet);  
 	foreach (row in resultSet) {
     	logMessage(&quot;&quot; + row);
 
@@ -45,7 +44,7 @@ try {
 } catch (Java.Lang.Throwable e) { 
 	logMessage(&quot;[DESPESAS]&quot; + e, severity : SEVERE);
 }
-logMessage(&quot;[DESPESAS] &quot; + idSolicitacao + &quot; - FIM&quot;, severity : DEBUG);
+logMessage(&quot;[DESPESAS] &quot; + this.despesa.id + &quot; - FIM&quot;, severity : DEBUG);
 </sourceCode>
 		</method>
 	</methods>

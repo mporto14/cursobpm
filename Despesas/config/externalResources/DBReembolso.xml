@@ -6,7 +6,7 @@
 	<property name="jdbc.host" value="localhost"/>
 	<property name="jdbc.database" value="cursobpm"/>
 	<property name="user" value="root"/>
-	<property name="jdbc.port" value="1521"/>
+	<property name="jdbc.port" value="3306"/>
 	<property name="jdbc.pool.min" value="0"/>
 	<property name="jdbc.pool.maxopencursors" value="100"/>
 	<property name="password" value="&lt;encrypted&gt;gTLbnYI="/>

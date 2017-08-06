@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<FDIObject>
+	<DirBusinessParameter>
+		<id>QUANTIDADE_APROVACOES</id>
+		<type>Int</type>
+		<defaultValue><![CDATA[3]]></defaultValue>
+		<valuesMap/>
+	</DirBusinessParameter>
+</FDIObject>
