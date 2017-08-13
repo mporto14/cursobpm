@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Aug 6, 2017 8:03:15 AM</xpdl:Created>
+            Aug 6, 2017 3:22:38 PM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -110,7 +110,7 @@
                 </xpdl:Lane>
                 <xpdl:Lane Name="AutomaticHandler" Id="AutomaticHandler">
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="350.0" IsVisible="false">
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="220.0" IsVisible="false">
                             <xpdl:Coordinates XCoordinate="1140.0" YCoordinate="0.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
@@ -127,6 +127,75 @@
                             <albpm:LocalizationDescriptions>
                                 <albpm:LocalizationDescription language="en">
                                     AutomaticHandler</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="Administrador" Id="Administrador">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="290.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1360.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="pt" label="Administrador"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    Administrador</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="SustentacaoTI" Id="SustentacaoTI">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="130.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1650.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="pt" label="SustentacaoTI"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    SustentacaoTI</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="Solicitante" Id="Solicitante">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="130.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1780.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="pt" label="Solicitante"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="en">
+                                    Solicitante</albpm:LocalizationDescription>
                             </albpm:LocalizationDescriptions>
                         </albpm:Localization>
                     </albpm:ALBPMExtensions>
@@ -214,7 +283,38 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Application>
+                <xpdl:Application Id="logarErro" Name="logarErro">
+                    <xpdl:Type>
+                        <xpdl:Script/>
+                    </xpdl:Type>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="ALBPMType" value="REGULAR"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Application>
+                <xpdl:Application Id="voltar" Name="voltar">
+                    <xpdl:Type>
+                        <xpdl:Script/>
+                    </xpdl:Type>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="ALBPMType" value="REGULAR"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Application>
+                <xpdl:Application Id="voltar1" Name="voltar1">
+                    <xpdl:Type>
+                        <xpdl:Script/>
+                    </xpdl:Type>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="ALBPMType" value="REGULAR"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Application>
                 <xpdl:Application Id="SFAprovarDespesa"/>
+                <xpdl:Application Id="DISPLAY"/>
             </xpdl:Applications>
             <xpdl:Activities>
                 <xpdl:Activity Name="Begin" Id="Begin">
@@ -273,6 +373,11 @@
                             <xpdl:TaskApplication Id="inicializarFluxo"/>
                         </xpdl:Task>
                     </xpdl:Implementation>
+                    <xpdl:TransitionRestrictions>
+                        <xpdl:TransitionRestriction>
+                            <xpdl:Join Type="XOR"/>
+                        </xpdl:TransitionRestriction>
+                    </xpdl:TransitionRestrictions>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Solicitante" IsVisible="true">
                             <xpdl:Coordinates XCoordinate="270.0" YCoordinate="100.0"/>
@@ -321,7 +426,7 @@
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="1175.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="1200.0" YCoordinate="110.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -376,8 +481,8 @@
                                 <albpm:StringFeature name="type" value="INTERACTIVE"/>
                                 <albpm:IntegerFeature name="maxInstances" value="100"/>
                                 <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
-                                <albpm:BooleanFeature name="abortable" value="false"/>
-                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:BooleanFeature name="abortable" value="true"/>
+                                <albpm:BooleanFeature name="assignable" value="true"/>
                                 <albpm:BooleanFeature name="autocomplete" value="true"/>
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
                                 <albpm:BooleanFeature name="suspendable" value="false"/>
@@ -440,8 +545,8 @@
                         <xpdl:TransitionRestriction>
                             <xpdl:Split Type="OR">
                                 <xpdl:TransitionRefs>
-                                    <xpdl:TransitionRef Id="DividirAprovacaoToDividirAprovacoes"/>
                                     <xpdl:TransitionRef Id="DividirAprovacaoToAguardarCancelar"/>
+                                    <xpdl:TransitionRef Id="DividirAprovacaoToDividirAprovacoes"/>
                                 </xpdl:TransitionRefs>
                             </xpdl:Split>
                         </xpdl:TransitionRestriction>
@@ -496,6 +601,14 @@
                         <xpdl:TransitionRestriction>
                             <xpdl:Join Type="XOR"/>
                         </xpdl:TransitionRestriction>
+                        <xpdl:TransitionRestriction>
+                            <xpdl:Split Type="XOR">
+                                <xpdl:TransitionRefs>
+                                    <xpdl:TransitionRef Id="JoinToInicializarFluxo"/>
+                                    <xpdl:TransitionRef Id="JoinToLiberarReembolso"/>
+                                </xpdl:TransitionRefs>
+                            </xpdl:Split>
+                        </xpdl:TransitionRestriction>
                     </xpdl:TransitionRestrictions>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Aprovador" IsVisible="true">
@@ -540,7 +653,7 @@
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Aprovador" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="240.0"/>
+                            <xpdl:Coordinates XCoordinate="630.0" YCoordinate="250.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -562,7 +675,7 @@
                                         <albpm:ArgumentMap target="idSolicitacao" isExpression="false" source="idSolicitacao"/>
                                     </albpm:ArgumentMaps>
                                     <albpm:Correlations>
-                                        <albpm:Correlation name="correlacaoPorId" initiate="true">
+                                        <albpm:Correlation name="correlacaoPorId" initiate="false">
                                             <albpm:CorrelationPropertyMappings>
                                                 <albpm:CorrelationPropertyMapping property="idSolicitacao" value="idSolicitacao"/>
                                             </albpm:CorrelationPropertyMappings>
@@ -633,28 +746,6 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
-                <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
-                    <xpdl:Implementation>
-                        <xpdl:No/>
-                    </xpdl:Implementation>
-                    <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="54.0"/>
-                        </xpdl:NodeGraphicsInfo>
-                    </xpdl:NodeGraphicsInfos>
-                    <xpdl:Extensions>
-                        <albpm:ALBPMExtensions>
-                            <albpm:FeatureSet>
-                                <albpm:StringFeature name="type" value="GROUP"/>
-                                <albpm:BooleanFeature name="atomic" value="false"/>
-                                <albpm:BooleanFeature name="collapsed" value="true"/>
-                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
-                                <albpm:BooleanFeature name="mainGroup" value="true"/>
-                            </albpm:FeatureSet>
-                            <albpm:Localization/>
-                        </albpm:ALBPMExtensions>
-                    </xpdl:Extensions>
-                </xpdl:Activity>
                 <xpdl:Activity Name="DividirAprovacoes" Id="DividirAprovacoes">
                     <xpdl:Route GatewayType="OR" MarkerVisible="true"/>
                     <xpdl:NodeGraphicsInfos>
@@ -692,7 +783,7 @@
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
-                                        </albpm:LocalizationDescription>
+                                    </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
                             </albpm:Localization>
                         </albpm:ALBPMExtensions>
@@ -707,14 +798,6 @@
                     <xpdl:TransitionRestrictions>
                         <xpdl:TransitionRestriction>
                             <xpdl:Join Type="XOR"/>
-                        </xpdl:TransitionRestriction>
-                        <xpdl:TransitionRestriction>
-                            <xpdl:Split Type="XOR">
-                                <xpdl:TransitionRefs>
-                                    <xpdl:TransitionRef Id="Join1ToJoin"/>
-                                    <xpdl:TransitionRef Id="Join1ToJoin1"/>
-                                </xpdl:TransitionRefs>
-                            </xpdl:Split>
                         </xpdl:TransitionRestriction>
                     </xpdl:TransitionRestrictions>
                     <xpdl:NodeGraphicsInfos>
@@ -752,8 +835,319 @@
                                 </albpm:LocalizationLabels>
                                 <albpm:LocalizationDescriptions>
                                     <albpm:LocalizationDescription language="pt">
-                                        </albpm:LocalizationDescription>
+                                    </albpm:LocalizationDescription>
                                 </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="ReenviarAtividade" Id="ReenviarAtividade">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskApplication Id="DISPLAY"/>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
+                    <xpdl:TransitionRestrictions>
+                        <xpdl:TransitionRestriction>
+                            <xpdl:Split Type="XOR">
+                                <xpdl:TransitionRefs>
+                                    <xpdl:TransitionRef Id="ReenviarAtividadeDue"/>
+                                    <xpdl:TransitionRef Id="ReenviarAtividadeToVoltar"/>
+                                </xpdl:TransitionRefs>
+                            </xpdl:Split>
+                        </xpdl:TransitionRestriction>
+                    </xpdl:TransitionRestrictions>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Administrador" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1430.0" YCoordinate="210.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="INTERACTIVE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:BooleanFeature name="abortable" value="false"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:BooleanFeature name="autocomplete" value="false"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="suspendable" value="false"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="false"/>
+                            </albpm:FeatureSet>
+                            <albpm:ActivityTasks>
+                                <albpm:ActivityTask name="ReenviarAtividade" type="DISPLAY">
+                                    <albpm:FeatureSet>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
+                                        <albpm:BooleanFeature name="readOnly" value="false"/>
+                                        <albpm:BooleanFeature name="repeatable" value="false"/>
+                                    </albpm:FeatureSet>
+                                    <albpm:DisplayType>
+                                        <albpm:FeatureSet>
+                                            <albpm:StringFeature name="method" value="reenviarAtividade"/>
+                                            <albpm:StringFeature name="buttons" value="Reenviar"/>
+                                            <albpm:StringFeature name="assigned" value="acao"/>
+                                            <albpm:StringFeature name="value" value="exceptionHolder"/>
+                                            <albpm:StringFeature name="default" value="OK"/>
+                                            <albpm:StringFeature name="codeLanguage" value="Java1"/>
+                                            <albpm:StringFeature name="version" value="1.1"/>
+                                        </albpm:FeatureSet>
+                                        <albpm:Title>
+                                            <albpm:Localization>
+                                                <albpm:LocalizationLabels>
+                                                    <albpm:LocalizedLabel language="en" label="&quot;Erro&quot;"/>
+                                                </albpm:LocalizationLabels>
+                                            </albpm:Localization>
+                                        </albpm:Title>
+                                    </albpm:DisplayType>
+                                    <albpm:Localization>
+                                        <albpm:LocalizationLabels>
+                                            <albpm:LocalizedLabel language="pt" label="Reenviar Atividade"/>
+                                        </albpm:LocalizationLabels>
+                                    </albpm:Localization>
+                                </albpm:ActivityTask>
+                            </albpm:ActivityTasks>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Reenviar Atividade"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="TratarErroTecnico" Id="TratarErroTecnico">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskApplication Id="DISPLAY"/>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="SustentacaoTI" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="130.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="INTERACTIVE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:BooleanFeature name="abortable" value="false"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:BooleanFeature name="autocomplete" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="suspendable" value="false"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="false"/>
+                            </albpm:FeatureSet>
+                            <albpm:ActivityTasks>
+                                <albpm:ActivityTask name="TratarErroTecnico" type="DISPLAY">
+                                    <albpm:FeatureSet>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
+                                        <albpm:BooleanFeature name="readOnly" value="false"/>
+                                        <albpm:BooleanFeature name="repeatable" value="false"/>
+                                    </albpm:FeatureSet>
+                                    <albpm:DisplayType>
+                                        <albpm:FeatureSet>
+                                            <albpm:StringFeature name="method" value="tratarErroTecnico"/>
+                                            <albpm:StringFeature name="buttons" value="Reenviar"/>
+                                            <albpm:StringFeature name="assigned" value="acao"/>
+                                            <albpm:StringFeature name="value" value="exceptionHolder"/>
+                                            <albpm:StringFeature name="default" value="Reenviar"/>
+                                            <albpm:StringFeature name="codeLanguage" value="Java1"/>
+                                            <albpm:StringFeature name="version" value="1.1"/>
+                                        </albpm:FeatureSet>
+                                        <albpm:Title>
+                                            <albpm:Localization>
+                                                <albpm:LocalizationLabels>
+                                                    <albpm:LocalizedLabel language="en" label="&quot;Erro Tecnico&quot;"/>
+                                                </albpm:LocalizationLabels>
+                                            </albpm:Localization>
+                                        </albpm:Title>
+                                    </albpm:DisplayType>
+                                    <albpm:Localization>
+                                        <albpm:LocalizationLabels>
+                                            <albpm:LocalizedLabel language="pt" label="Tratar Erro Tecnico"/>
+                                        </albpm:LocalizationLabels>
+                                    </albpm:Localization>
+                                </albpm:ActivityTask>
+                            </albpm:ActivityTasks>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Tratar Erro Tecnico"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="Voltar" Id="Voltar">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskApplication Id="voltar"/>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
+                    <xpdl:TransitionRestrictions>
+                        <xpdl:TransitionRestriction>
+                            <xpdl:Join Type="XOR"/>
+                        </xpdl:TransitionRestriction>
+                    </xpdl:TransitionRestrictions>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="SustentacaoTI" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="250.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="AUTOMATIC"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                            </albpm:FeatureSet>
+                            <albpm:ActivityTasks>
+                                <albpm:ActivityTask name="Voltar" type="METHOD">
+                                    <albpm:FeatureSet>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
+                                        <albpm:StringFeature name="method" value="voltar"/>
+                                        <albpm:BooleanFeature name="readOnly" value="false"/>
+                                        <albpm:BooleanFeature name="repeatable" value="false"/>
+                                    </albpm:FeatureSet>
+                                    <albpm:Localization>
+                                        <albpm:LocalizationLabels>
+                                            <albpm:LocalizedLabel language="pt" label="Voltar"/>
+                                        </albpm:LocalizationLabels>
+                                    </albpm:Localization>
+                                </albpm:ActivityTask>
+                            </albpm:ActivityTasks>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Voltar"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="Voltar1" Id="Voltar1">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskApplication Id="voltar1"/>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Administrador" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1550.0" YCoordinate="300.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="AUTOMATIC"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                            </albpm:FeatureSet>
+                            <albpm:ActivityTasks>
+                                <albpm:ActivityTask name="Voltar1" type="METHOD">
+                                    <albpm:FeatureSet>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
+                                        <albpm:StringFeature name="method" value="voltar1"/>
+                                        <albpm:BooleanFeature name="readOnly" value="false"/>
+                                        <albpm:BooleanFeature name="repeatable" value="false"/>
+                                    </albpm:FeatureSet>
+                                    <albpm:Localization>
+                                        <albpm:LocalizationLabels>
+                                            <albpm:LocalizedLabel language="pt" label="Voltar"/>
+                                        </albpm:LocalizationLabels>
+                                    </albpm:Localization>
+                                </albpm:ActivityTask>
+                            </albpm:ActivityTasks>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Voltar"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="ApropriarDoProcesso" Id="ApropriarDoProcesso">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Administrador" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="1500.0" YCoordinate="440.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="GRAB"/>
+                                <albpm:BooleanFeature name="abortable" value="true"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:StringFeature name="grabType" value="GG"/>
+                                <albpm:BooleanFeature name="suspendable" value="true"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Apropriar do processo"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:TransitionRestrictions>
+                        <xpdl:TransitionRestriction>
+                            <xpdl:Split Type="XOR">
+                                <xpdl:TransitionRefs>
+                                    <xpdl:TransitionRef Id="ProcessGroupToReenviarAtividade"/>
+                                    <xpdl:TransitionRef Id="ProcessGroupToTratarErroTecnico"/>
+                                </xpdl:TransitionRefs>
+                            </xpdl:Split>
+                        </xpdl:TransitionRestriction>
+                    </xpdl:TransitionRestrictions>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Administrador" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="1468.0" YCoordinate="52.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="GROUP"/>
+                                <albpm:BooleanFeature name="atomic" value="false"/>
+                                <albpm:BooleanFeature name="collapsed" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="mainGroup" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="en" label="Process Exceptions"/>
+                                </albpm:LocalizationLabels>
                             </albpm:Localization>
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
@@ -764,7 +1158,7 @@
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="1295.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="1320.0" YCoordinate="110.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -824,23 +1218,8 @@
                 <xpdl:Transition Id="ConcluirProcessoToEnd" Name="ConcluirProcessoToEnd" From="ConcluirProcesso" To="End">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="1175.0" YCoordinate="110.0"/>
-                            <xpdl:Coordinates XCoordinate="1295.0" YCoordinate="110.0"/>
-                        </xpdl:ConnectorGraphicsInfo>
-                    </xpdl:ConnectorGraphicsInfos>
-                    <albpm:ALBPMExtensions>
-                        <albpm:FeatureSet>
-                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
-                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
-                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
-                        </albpm:FeatureSet>
-                    </albpm:ALBPMExtensions>
-                </xpdl:Transition>
-                <xpdl:Transition Id="Join1ToJoin1" Name="Join1ToJoin1" From="Join1" To="Join1">
-                    <xpdl:ConnectorGraphicsInfos>
-                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="70.0"/>
-                            <xpdl:Coordinates XCoordinate="770.0" YCoordinate="70.0"/>
+                            <xpdl:Coordinates XCoordinate="1200.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="1320.0" YCoordinate="110.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -885,7 +1264,7 @@
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
                             <xpdl:Coordinates XCoordinate="400.0" YCoordinate="100.0"/>
-                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="240.0"/>
+                            <xpdl:Coordinates XCoordinate="630.0" YCoordinate="250.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -899,7 +1278,7 @@
                 <xpdl:Transition Id="AguardarCancelarToJoin" Name="AguardarCancelarToJoin" From="AguardarCancelar" To="Join">
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
-                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="240.0"/>
+                            <xpdl:Coordinates XCoordinate="630.0" YCoordinate="250.0"/>
                             <xpdl:Coordinates XCoordinate="850.0" YCoordinate="110.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
@@ -915,7 +1294,7 @@
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
                             <xpdl:Coordinates XCoordinate="1020.0" YCoordinate="110.0"/>
-                            <xpdl:Coordinates XCoordinate="1175.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="1200.0" YCoordinate="110.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -971,6 +1350,158 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Transition>
+                <xpdl:Transition Id="ProcessGroupToTratarErroTecnico" Name="ProcessGroupToTratarErroTecnico" From="ProcessGroup" To="TratarErroTecnico">
+                    <xpdl:Condition Type="EXCEPTION">
+                        <xpdl:Expression>
+                            Erro.ErroTecnico</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="1468.0" YCoordinate="52.0"/>
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="130.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="EXCEPTION"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                            <albpm:StringFeature name="exception" value="Erro.ErroTecnico"/>
+                            <albpm:StringFeature name="exceptionCauseHolderVariableName" value="exceptionHolder"/>
+                            <albpm:IntegerFeature name="exceptionOrder" value="0"/>
+                            <albpm:StringFeature name="exceptionSignature" value="Lxobject.Erro.ErroTecnico;"/>
+                            <albpm:StringFeature name="exceptionType" value="xobject"/>
+                            <albpm:StringFeature name="userName" value=""/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="pt">
+                                </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="ProcessGroupToReenviarAtividade" Name="ProcessGroupToReenviarAtividade" From="ProcessGroup" To="ReenviarAtividade">
+                    <xpdl:Condition Type="EXCEPTION">
+                        <xpdl:Expression>
+                            Erro.ErroDespesa</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="1468.0" YCoordinate="52.0"/>
+                            <xpdl:Coordinates XCoordinate="1430.0" YCoordinate="210.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="EXCEPTION"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                            <albpm:StringFeature name="exception" value="Erro.ErroDespesa"/>
+                            <albpm:StringFeature name="exceptionCauseHolderVariableName" value="exceptionHolder"/>
+                            <albpm:IntegerFeature name="exceptionOrder" value="1"/>
+                            <albpm:StringFeature name="exceptionSignature" value="Lxobject.Erro.ErroDespesa;"/>
+                            <albpm:StringFeature name="exceptionType" value="xobject"/>
+                            <albpm:StringFeature name="userName" value=""/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="pt">
+                                </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="TratarErroTecnicoToVoltar" Name="TratarErroTecnicoToVoltar" From="TratarErroTecnico" To="Voltar">
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="130.0"/>
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="250.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="ReenviarAtividadeToVoltar" Name="ReenviarAtividadeToVoltar" From="ReenviarAtividade" To="Voltar">
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="1430.0" YCoordinate="210.0"/>
+                            <xpdl:Coordinates XCoordinate="1582.0" YCoordinate="140.0"/>
+                            <xpdl:Coordinates XCoordinate="1710.0" YCoordinate="250.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="1582,140"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="ReenviarAtividadeToVoltar1" Name="ReenviarAtividadeToVoltar1" From="ReenviarAtividade" To="Voltar1">
+                    <xpdl:Condition Type="CONDITION">
+                        <xpdl:Expression>
+                            &apos;5m&apos;</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="1430.0" YCoordinate="210.0"/>
+                            <xpdl:Coordinates XCoordinate="1550.0" YCoordinate="300.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="DUE"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                            <albpm:StringFeature name="userName" value=""/>
+                            <albpm:StringFeature name="dueConditionType" value="INTERVAL_CONSTANT"/>
+                            <albpm:BooleanFeature name="dueUseCalendarRules" value="false"/>
+                            <albpm:StringFeature name="nextDate" value="NEXT_WORKING_DAY_SAME_TIME"/>
+                            <albpm:StringFeature name="codeLanguage" value="Fuego"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="pt">
+                                </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="JoinToInicializarFluxo" Name="JoinToInicializarFluxo" From="Join" To="InicializarFluxo">
+                    <xpdl:Condition Type="CONDITION">
+                        <xpdl:Expression>
+                            acao == &quot;RECARREGAR&quot;</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="850.0" YCoordinate="110.0"/>
+                            <xpdl:Coordinates XCoordinate="586.0" YCoordinate="571.0"/>
+                            <xpdl:Coordinates XCoordinate="270.0" YCoordinate="100.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="CONDITIONAL"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="586,571"/>
+                            <albpm:IntegerFeature name="order" value="0"/>
+                            <albpm:StringFeature name="userName" value="Recarregar?"/>
+                            <albpm:StringFeature name="codeLanguage" value="Java1"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
             </xpdl:Transitions>
             <xpdl:Extensions>
                 <albpm:ALBPMExtensions>
@@ -1003,17 +1534,20 @@
 			position=&quot;2&quot;/&gt;
 		&lt;String name=&quot;aprovador&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;8&quot;/&gt;
+			position=&quot;3&quot;/&gt;
 		&lt;object
 			type=&quot;Model.Despesa&quot;
 			name=&quot;despesa&quot;
 			flags=&quot;hassetter hasgetter public&quot;
 			position=&quot;4&quot;/&gt;
+		&lt;Any name=&quot;exceptionHolder&quot;
+			flags=&quot;hassetter hasgetter public&quot;
+			position=&quot;5&quot;/&gt;
 		&lt;Int
 			length=&quot;32&quot;
 			name=&quot;idSolicitacao&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;5&quot;/&gt;
+			position=&quot;6&quot;/&gt;
 		&lt;String name=&quot;parametroAprov&quot;
 			flags=&quot;hassetter hasgetter public&quot;
 			position=&quot;7&quot;/&gt;
@@ -1027,7 +1561,7 @@
 				type=&quot;Instance&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;concluirProcesso&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;sourceCode
 				language=&quot;Java1&quot;&gt;WS.DespesaService.Despesa d = WS.DespesaService.Despesa();
 d.id = idSolicitacao;
@@ -1037,14 +1571,18 @@ WsDespesaService.atualizarStatus(arg0 : d, out result : status);
 
 logMessage(&amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Processo concluido com acao = &amp;quot; + acao, severity : DEBUG);
 &lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;dividirAprovacao&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;sourceCode
 				language=&quot;Java1&quot;/&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;false&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;dividirAprovacoes&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;arg name=&quot;copy&quot;
 				description=&quot;&quot;
 				flags=&quot;in out&quot;
@@ -1058,17 +1596,38 @@ for (int i = 0; i &amp;lt; quantidade; i++) {
 	logMessage(&amp;quot;Gerando &amp;quot; + (i + 1) + &amp;quot;a. aprovacao &amp;quot;);
 
 	copy = clone(this);
+	if (i == 1) { 
+		copy.parametroAprov = &amp;quot;RH&amp;quot;;
+	}
 }
 
 &lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;false&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;inicializarFluxo&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;sourceCode
 				language=&quot;Java1&quot;&gt;logMessage(&amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Inicio. Solicitacao: &amp;quot; + idSolicitacao);
 
+ErroDespesa err = new ErroDespesa();
+ErroTecnico err2 = new ErroTecnico();
 WS.DespesaService.Despesa desp;
-WsDespesaService.buscarPorId(arg0 : idSolicitacao, out result : desp);
+try { 
+	WsDespesaService.buscarPorId(arg0 : idSolicitacao, out result : desp);
+} catch (Fuego.Net.TimedOutException e) {
+	err2.mensagem = &amp;quot;Erro ao obter os detalhes da operação na plataforma. \nTimeout - &amp;quot; + e;
+	throw err2;
+} catch (Fuego.WebServices.SoapFaultException e) {
+	err.mensagem = &amp;quot;Erro ao obter os detalhes da operação na plataforma. \nSoapFaultException - &amp;quot;+e.faultString;
+	throw err;
+} catch (Java.Net.ConnectException e) {
+	err2.mensagem = &amp;quot;Erro ao obter os detalhes da operação na plataforma. \nJava.Net.ConnectException - &amp;quot;+e.message;
+	throw err2;
+} catch (Any e) {
+	err.mensagem = &amp;quot;Erro ao obter os detalhes da operação na plataforma. \nErro inesperado - &amp;quot; + e;
+	throw err;
+}
 
 despesa = Model.Despesa.fromService(wsObj : desp);
 
@@ -1079,15 +1638,17 @@ else {
     parametroAprov = &amp;quot;PROJETO&amp;quot;;
 }
 
-// description = &amp;quot;Aprovacao de despesas\nSolicitação: &amp;quot; + idSolicitacao;
+description = &amp;quot;Aprovacao de despesas\nSolicitação: &amp;quot; + idSolicitacao;
+
 motivo = despesa.motivo;
-valor = despesa.valor;
 
 logMessage(&amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Motivo: &amp;quot; + despesa.motivo, severity : DEBUG);
 &lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;join&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;arg name=&quot;copy&quot;
 				description=&quot;&quot;
 				flags=&quot;in&quot;
@@ -1097,26 +1658,79 @@ logMessage(&amp;quot;[DESPESAS] &amp;quot; + id + &amp;quot; - Motivo: &amp;quot
 
 if (copy.acao == &amp;quot;CANCELADO&amp;quot;) { 
 	action = RELEASE;
+} else if (copy.acao == &amp;quot;RECARREGAR&amp;quot;) { 
+	action = RELEASE;
 }
 
 acao = copy.acao;
 &lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;false&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;join1&quot;
-			flags=&quot;server&quot;&gt;
+			flags=&quot;public server&quot;&gt;
 			&lt;arg name=&quot;copy&quot;
 				description=&quot;&quot;
 				flags=&quot;in&quot;
 				type=&quot;Instance&quot;/&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;logMessage(&amp;quot;Aprovado por: &amp;quot; + aprovador);&lt;/sourceCode&gt;
+				language=&quot;Java1&quot;&gt;logMessage(&amp;quot;Aprovado por: &amp;quot; + aprovador);
+
+if (copy.acao == &amp;quot;RECARREGAR&amp;quot;) { 
+	action = RELEASE;
+	acao = copy.acao;
+}&lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;false&quot;/&gt;
 		&lt;/method&gt;
 		&lt;method name=&quot;liberarReembolso&quot;
-			flags=&quot;clientavailable server&quot;&gt;
+			flags=&quot;clientavailable public server&quot;&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;DynamicSQL.executeQuery(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
+				language=&quot;Java1&quot;&gt;DynamicSQL.executeUpdate(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
 			inParameters : { id, despesa.motivo, despesa.valor, &amp;quot;&amp;quot; });
+
+
+DynamicSQL.executeUpdate(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
+			inParameters : { id, despesa.motivo, despesa.valor, &amp;quot;&amp;quot; });
+
+
+DynamicSQL.executeUpdate(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
+			inParameters : { id, despesa.motivo, despesa.valor, &amp;quot;&amp;quot; });
+
+DynamicSQL.executeUpdate(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
+			inParameters : { id, despesa.motivo, despesa.valor, &amp;quot;&amp;quot; });
+
+
+DynamicSQL.executeUpdate(sentence : &amp;quot;insert into lancamento values (?, ?, ?, ?, ?)&amp;quot;, implname : &amp;quot;DBReembolso&amp;quot;, 
+			inParameters : { id, despesa.motivo, despesa.valor, &amp;quot;&amp;quot; });
+			
+			
 &lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
+		&lt;/method&gt;
+		&lt;method name=&quot;logarErro&quot;
+			flags=&quot;public server&quot;&gt;
+			&lt;sourceCode
+				language=&quot;Java1&quot;&gt;logMessage(&amp;quot;Instancia &amp;quot; + id + &amp;quot; entrou em excecao&amp;quot;);
+&lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
+		&lt;/method&gt;
+		&lt;method name=&quot;voltar&quot;
+			flags=&quot;public server&quot;&gt;
+			&lt;sourceCode
+				language=&quot;Java1&quot;&gt;action = BACK;
+&lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
+		&lt;/method&gt;
+		&lt;method name=&quot;voltar1&quot;
+			flags=&quot;public server&quot;&gt;
+			&lt;sourceCode
+				language=&quot;Java1&quot;&gt;action = BACK;&lt;/sourceCode&gt;
+			&lt;property name=&quot;RelayToSupported&quot;
+				value=&quot;true&quot;/&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>

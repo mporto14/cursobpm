@@ -2,6 +2,6 @@
 <?fuego version="6.0.5" build="97234"?>
 <preferences>
 	<general/>
-	<processes exceptionHandlingPolicy="PROPAGATE" interactiveRole=""/>
-	<languages default="pt" availables="pt"/>
+	<processes exceptionHandlingPolicy="PROPAGATE" interactiveRole="Aprovador"/>
+	<languages default="pt" availables="pt;en"/>
 </preferences>

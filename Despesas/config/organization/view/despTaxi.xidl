@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<FDIObject>
+	<DirView>
+		<id>despTaxi</id>
+		<type>2</type>
+		<processes>
+			<process>/Aprovacao</process>
+		</processes>
+		<roles>
+			<role>Aprovador</role>
+			<role>Financeiro</role>
+			<role>Solicitante</role>
+		</roles>
+		<properties><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<view id="despTaxi" owner="organization" type="INSTANCES" version="1">
+	<hidden>false</hidden>
+	<readonly>true</readonly>
+	<custom>true</custom>
+	<presentation>minhaNovaPresentation</presentation>
+	<assignedProcesses>
+		<process>/Aprovacao</process>
+	</assignedProcesses>
+	<assignedRoles>
+		<role>Aprovador</role>
+		<role>Financeiro</role>
+		<role>Solicitante</role>
+	</assignedRoles>
+	<labels>
+		<label language="en">Despesas de Taxi</label>
+		<label language="pt">Despesas de Taxi</label>
+	</labels>
+	<filter>
+		<name>despTaxi</name>
+		<matchall>true</matchall>
+		<casesensitive>false</casesensitive>
+		<scope>
+			<participant>ALL</participant>
+			<status>ONLY_INPROCESS</status>
+		</scope>
+		<attributes>
+			<attribute parametric="false">
+				<variable kind="5">motivo</variable>
+				<operator>IS</operator>
+				<value class="java.lang.String">TAXI</value>
+			</attribute>
+		</attributes>
+	</filter>
+</view>
+]]></properties>
+	</DirView>
+</FDIObject>

@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Jul 19, 2017 1:37:02 AM</xpdl:Created>
+            Aug 6, 2017 2:47:52 PM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -51,7 +51,18 @@
                 <xpdl:Version>
                     0</xpdl:Version>
             </xpdl:RedefinableHeader>
-            <xpdl:Applications/>
+            <xpdl:Applications>
+                <xpdl:Application Id="businessRule" Name="businessRule">
+                    <xpdl:Type>
+                        <xpdl:Script/>
+                    </xpdl:Type>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="ALBPMType" value="REGULAR"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Application>
+            </xpdl:Applications>
             <xpdl:Activities>
                 <xpdl:Activity Name="Begin" Id="Begin">
                     <xpdl:Event>
@@ -105,7 +116,11 @@
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
                                 <albpm:BooleanFeature name="mainGroup" value="true"/>
                             </albpm:FeatureSet>
-                            <albpm:Localization/>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="en" label="Process Exceptions"/>
+                                </albpm:LocalizationLabels>
+                            </albpm:Localization>
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
@@ -184,18 +199,10 @@
 			flags=&quot;hassetter hasgetter public column&quot;
 			position=&quot;1&quot;&gt;
 			&lt;displayName
-				language=&quot;pt&quot;&gt;&lt;![CDATA[motivo]]&gt;&lt;/displayName&gt;
-		&lt;/String&gt;
-		&lt;Real
-			length=&quot;64&quot;
-			name=&quot;valor&quot;
-			flags=&quot;hassetter hasgetter public column&quot;
-			position=&quot;2&quot;&gt;
-			&lt;property name=&quot;BUSINESS_TYPE&quot;
-				value=&quot;DIMENSION&quot;/&gt;
+				language=&quot;en&quot;&gt;&lt;![CDATA[Motivo da Despesa]]&gt;&lt;/displayName&gt;
 			&lt;displayName
-				language=&quot;pt&quot;&gt;&lt;![CDATA[valor]]&gt;&lt;/displayName&gt;
-		&lt;/Real&gt;
+				language=&quot;pt&quot;&gt;&lt;![CDATA[Motivo da Despesa]]&gt;&lt;/displayName&gt;
+		&lt;/String&gt;
 	&lt;/attributes&gt;
 	&lt;methods&gt;
 		&lt;method name=&quot;Instance&quot;
@@ -204,6 +211,19 @@
 				description=&quot;&quot;
 				flags=&quot;retval&quot;
 				type=&quot;Instance&quot;/&gt;
+		&lt;/method&gt;
+		&lt;method name=&quot;businessRule&quot;
+			flags=&quot;server&quot;&gt;
+			&lt;outputArgument name=&quot;return&quot;
+				description=&quot;&quot;
+				flags=&quot;retval&quot;
+				type=&quot;Bool&quot;/&gt;
+			&lt;sourceCode
+				language=&quot;Fuego&quot;&gt;return true&lt;/sourceCode&gt;
+			&lt;property name=&quot;BUSINESS_RULE&quot;
+				value=&quot;true&quot;/&gt;
+			&lt;displayName
+				language=&quot;pt&quot;&gt;&lt;![CDATA[businessRule]]&gt;&lt;/displayName&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>

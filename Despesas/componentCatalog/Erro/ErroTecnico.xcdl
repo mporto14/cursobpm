@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.0.5" build="97234"?>
+<component name="ErroTecnico" description="" versionID="Version 6.0 GA" flags="cloneable exception replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes>
+		<String name="mensagem" flags="hassetter hasgetter public" position="1"/>
+	</attributes>
+	<methods>
+		<method name="ErroTecnico" flags="static clientavailable">
+			<outputArgument name="return" description="" flags="retval" type="Erro.ErroTecnico"/>
+		</method>
+	</methods>
+</component>

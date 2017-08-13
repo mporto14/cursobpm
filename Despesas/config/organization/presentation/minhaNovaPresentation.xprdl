@@ -2,21 +2,20 @@
 <?fuego version="6.0.5" build="97234"?>
 <FDIObject>
 	<DirPresentation>
-		<id>PresPadrao</id>
+		<id>minhaNovaPresentation</id>
 		<type>2</type>
 		<properties><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <?fuego version="6.0.5" build="97234"?>
-<presentation id="PresPadrao" owner="custom" type="INSTANCES" version="1">
+<presentation id="minhaNovaPresentation" owner="custom" type="INSTANCES" version="1">
 	<readonly>false</readonly>
 	<columns>
 		<column size="25">PREDEFINE_DESCRIPTION</column>
-		<column size="15">PREDEFINE_ACTIVITY</column>
-		<column format_type="DEFAULT" size="12">PREDEFINE_RECEIVED TIME</column>
-		<column format_type="DEFAULT" size="12">PREDEFINE_ACTIVITY DEADLINE</column>
+		<column size="10">PREDEFINE_AUTHOR</column>
+		<column format_type="NUMBER_INTEGER" size="3">PREDEFINE_COPY</column>
 	</columns>
 	<ordering>
-		<entry ascending="true">PREDEFINE_ACTIVITY DEADLINE</entry>
-		<entry ascending="false">valor</entry>
+		<entry ascending="false">PREDEFINE_AUTHOR</entry>
+		<entry ascending="true">PREDEFINE_COPY</entry>
 	</ordering>
 </presentation>
 ]]></properties>

@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            Aug 6, 2017 8:03:37 AM</xpdl:Created>
+            Aug 6, 2017 3:04:37 PM</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -308,13 +308,47 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
+                <xpdl:Activity Name="Erro" Id="Erro">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Aprovador" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="520.0" YCoordinate="240.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="INTERACTIVE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:BooleanFeature name="abortable" value="false"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:BooleanFeature name="autocomplete" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="suspendable" value="false"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="false"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="pt" label="Erro"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="pt">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
                 <xpdl:Activity Name="ProcessGroup" Id="ProcessGroup">
                     <xpdl:Implementation>
                         <xpdl:No/>
                     </xpdl:Implementation>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
-                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="71.0"/>
+                            <xpdl:Coordinates XCoordinate="537.0" YCoordinate="329.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -326,7 +360,11 @@
                                 <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
                                 <albpm:BooleanFeature name="mainGroup" value="true"/>
                             </albpm:FeatureSet>
-                            <albpm:Localization/>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="en" label="Process Exceptions"/>
+                                </albpm:LocalizationLabels>
+                            </albpm:Localization>
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
@@ -408,6 +446,37 @@
                         </albpm:FeatureSet>
                     </albpm:ALBPMExtensions>
                 </xpdl:Transition>
+                <xpdl:Transition Id="ProcessGroupToErro" Name="ProcessGroupToErro" From="ProcessGroup" To="Erro">
+                    <xpdl:Condition Type="EXCEPTION">
+                        <xpdl:Expression>
+                            Erro.ErroDespesa</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="537.0" YCoordinate="329.0"/>
+                            <xpdl:Coordinates XCoordinate="520.0" YCoordinate="240.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="EXCEPTION"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                            <albpm:StringFeature name="exception" value="Erro.ErroDespesa"/>
+                            <albpm:StringFeature name="exceptionCauseHolderVariableName" value="exceptionHolder"/>
+                            <albpm:IntegerFeature name="exceptionOrder" value="0"/>
+                            <albpm:StringFeature name="exceptionSignature" value="Lxobject.Erro.ErroDespesa;"/>
+                            <albpm:StringFeature name="exceptionType" value="xobject"/>
+                            <albpm:StringFeature name="userName" value=""/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="pt">
+                                </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
             </xpdl:Transitions>
             <xpdl:Extensions>
                 <albpm:ALBPMExtensions>
@@ -437,14 +506,17 @@
 			name=&quot;despesa&quot;
 			flags=&quot;hassetter hasgetter public&quot;
 			position=&quot;2&quot;/&gt;
+		&lt;Any name=&quot;exceptionHolder&quot;
+			flags=&quot;hassetter hasgetter public&quot;
+			position=&quot;3&quot;/&gt;
 		&lt;Int
 			length=&quot;32&quot;
 			name=&quot;idSolicitacao&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;3&quot;/&gt;
+			position=&quot;4&quot;/&gt;
 		&lt;String name=&quot;parametroAprov&quot;
 			flags=&quot;hassetter hasgetter public&quot;
-			position=&quot;4&quot;/&gt;
+			position=&quot;5&quot;/&gt;
 	&lt;/attributes&gt;
 	&lt;methods&gt;
 		&lt;method name=&quot;Instance&quot;
